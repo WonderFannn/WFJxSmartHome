@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@color/transparent_black" >
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/bg_add_account_dialog"
+        android:layout_centerInParent="true">
+    <LinearLayout 
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button 
+            android:id="@+id/tv_curtain_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/transparent"
+            android:text="窗帘控制"
+            android:textColor="@color/text_normal"
+            android:textSize="@dimen/text_size_small"/>
+        <Button 
+            android:id="@+id/tv_position_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="百分比控制"
+            android:background="@drawable/btn_curtain_right_hover"
+            android:textColor="@color/text_normal"
+            android:textSize="@dimen/text_size_small"/>
+    </LinearLayout>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        
+        android:layout_below="@id/title_layout"
+        android:background="@color/tab_item_hover"/>
+    
+        <LinearLayout
+            android:id="@+id/ll_curtain_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal" >
+
+            <ImageView
+                android:id="@+id/curtain_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/default_img_desc"
+                android:src="@drawable/btn_curtain_up" />
+
+            <ImageView
+                android:id="@+id/curtain_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_curtain_stop"
+                android:contentDescription="@string/default_img_desc" />
+
+            <ImageView
+                android:id="@+id/curtain_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_curtain_down"
+                android:contentDescription="@string/default_img_desc" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_position_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/title_layout"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_horizontal" >
+
+            <ImageView
+                android:id="@+id/curtain_mode_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/default_img_desc"
+                android:src="@drawable/ico_curtain_mode_1" />
+
+            <ImageView
+                android:id="@+id/curtain_mode_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/ico_curtain_mode_2"
+                android:contentDescription="@string/default_img_desc" />
+
+            <ImageView
+                android:id="@+id/curtain_mode_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:background="@drawable/ico_curtain_mode_3"
+                android:contentDescription="@string/default_img_desc" />
+
+            <ImageView
+                android:id="@+id/curtain_mode_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:background="@drawable/ico_curtain_mode_4"
+                android:contentDescription="@string/default_img_desc" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <com.jinxin.jxsmarthome.ui.widget.NumberSeekBar
+                android:id="@+id/bar0"
+                style="@style/NumberProgressBar_Default"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:max="100"
+                android:progressDrawable="@drawable/numberseekbar_background"
+                android:thumb="@drawable/thumb_bar" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+</RelativeLayout>

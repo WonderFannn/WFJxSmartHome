@@ -1,0 +1,403 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roundProgress="http://schemas.android.com/apk/res/com.jinxin.jxsmarthome"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_view"
+    tools:context=".LightFragment" >
+
+    <RelativeLayout
+        android:id="@+id/color_select_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true" >
+
+        <!-- 颜色选择 -->
+
+        <FrameLayout
+            android:id="@+id/main_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="30dp"
+            android:paddingTop="30dp"
+            android:visibility="visible" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:src="@drawable/bg_panel" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:src="@drawable/btn_power" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:src="@drawable/bg_track" />
+
+            <com.jinxin.widget.progressBar.CircleProgress
+                android:id="@+id/roundBar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_track"
+                roundProgress:Inside_Interval="20"
+                roundProgress:Paint_Color="0xff0000ff"
+                roundProgress:Paint_Width="5"
+                roundProgress:fill="false"
+                roundProgress:max="100" />
+
+            <RelativeLayout
+                android:id="@+id/ib_light_power"
+                android:layout_width="60.0dip"
+                android:layout_height="60.0dip"
+                android:layout_gravity="center"
+                android:background="@color/transparent" >
+
+                <ImageView
+                    android:id="@+id/iv_light_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/imageView1"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_bulbbottom" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/iv_light_color"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_gi_bulboff" />
+            </RelativeLayout>
+
+            <com.jinxin.widget.progressBar.UniversalColorView
+                android:id="@+id/circle_color_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/transparent" />
+
+            <ImageView
+                android:id="@+id/color_light_on"
+                android:layout_width="26.0dip"
+                android:layout_height="26.0dip"
+                android:layout_gravity="bottom|right|center"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginRight="50.0dip"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_brightness_max" />
+
+            <ImageView
+                android:id="@+id/color_light_off"
+                android:layout_width="26.0dip"
+                android:layout_height="26.0dip"
+                android:layout_gravity="bottom|left|center"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginLeft="50.0dip"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_brightness_min" />
+        </FrameLayout>
+
+        <!-- 白灯亮度 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_white_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/iv_white_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_white_light" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_white_light"
+                android:layout_marginTop="15dp"
+                android:padding="10dp" >
+
+                <ImageView
+                    android:id="@+id/iv_light_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_light" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_light_bg"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp" >
+
+                    <SeekBar
+                        android:id="@+id/white_light_seekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/seekbar_light_bg"
+                        android:thumb="@drawable/thumb_bar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/white_light_seekbar"
+                        android:layout_marginTop="8dp"
+                        android:text="0"
+                        android:textColor="@color/text_normal"
+                        android:textSize="@dimen/text_size_mini" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/white_light_seekbar"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="100"
+                        android:textColor="@color/text_normal"
+                        android:textSize="@dimen/text_size_mini" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        <!-- 白灯亮度  end -->
+        <!-- 颜色选择 end -->
+
+        <RelativeLayout
+            android:id="@+id/rl_hor_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/main_panel"
+            android:padding="5dp" >
+
+            <com.jinxin.widget.progressBar.RectColorView
+                android:id="@+id/rect_color_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/pop_light_choose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/pop_light_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/selector_radio"
+                android:checked="true"
+                android:text="@string/pop_light_color"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/pop_light_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/selector_radio"
+                android:text="@string/pop_light_white"
+                android:textColor="@color/white" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <!-- 颜色渐变 -->
+
+    <LinearLayout
+        android:id="@+id/color_fade_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_shape_corner"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/iv_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_light" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_light"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" >
+
+                <SeekBar
+                    android:id="@+id/pop_light_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_light_bg"
+                    android:thumb="@drawable/thumb_bar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/pop_light_seekbar"
+                    android:layout_marginTop="8dp"
+                    android:text="0"
+                    android:textColor="@color/text_normal"
+                    android:textSize="@dimen/text_size_mini" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/pop_light_seekbar"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="100"
+                    android:textColor="@color/text_normal"
+                    android:textSize="@dimen/text_size_mini" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_shape_corner"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <com.jinxin.jxsmarthome.ui.widget.wheelview.WheelView
+                    android:id="@+id/wheel_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1" />
+
+                <com.jinxin.jxsmarthome.ui.widget.wheelview.WheelView
+                    android:id="@+id/wheel_delay_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/lights_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_btn_switch"
+                android:text="切  换"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 颜色渐变  end -->
+
+    <RelativeLayout
+        android:id="@+id/color_change_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/color_mode_change_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/selector_button_save"
+            android:padding="5dp"
+            android:text="魔幻灯光"
+            android:textColor="@color/dark_gray" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/light_foot_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true" >
+
+        <TextView
+            android:id="@+id/color_select_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_hover"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="颜色选择"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/color_fade_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="颜色渐变"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/color_change_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="颜色变换"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

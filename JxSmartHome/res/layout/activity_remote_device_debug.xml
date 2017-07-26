@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_group"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/remote_device_operation_tips"
+                android:textColor="@color/text_green"
+                android:textSize="@dimen/text_size_small" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/btn_hover_color" />
+
+            <TextView
+                android:id="@+id/tv_current_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="4dp"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_small" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_remote_debug"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp" >
+				<LinearLayout
+				    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="2dp"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical" >
+                    <View 
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/tab_item_hover"/>
+                <ImageView
+                    android:id="@+id/iv_pre_device"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/default_img_desc"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:src="@drawable/icon_pre_page" />
+				</LinearLayout>
+                <ImageView
+                    android:id="@+id/btn_save"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/default_img_desc"
+                    android:src="@drawable/ico_btn_save" />
+			<LinearLayout
+				    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="2dp"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical" >
+                <View 
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/tab_item_hover"/>
+                <ImageView
+                    android:id="@+id/iv_next_device"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/default_img_desc"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:src="@drawable/icon_next_page" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

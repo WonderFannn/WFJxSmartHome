@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_item_hover"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/head_line_orange"/>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+	    <ListView 
+	        android:id="@+id/dlna_listview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:padding="5dp"
+	        android:scrollbars="none" >
+	        
+	    </ListView>
+	    <Button 
+	        android:id="@+id/dlna_cance_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="8dp"
+	        android:paddingRight="8dp"
+	        android:layout_gravity="center_horizontal"
+	        android:textColor="@color/text_color"
+	        android:background="@drawable/selector_button_save"
+	        android:text="@string/no" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_normal"
+    android:orientation="vertical" >
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/top_line"/>
+    <ScrollView 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:scrollbars="none" >
+	    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="5dp" >
+	        <TextView 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="25dp"
+       		    android:textStyle="bold"
+	            android:textColor="@color/text"
+	            android:textSize="@dimen/text_size_medium"
+	            android:text="@string/set_nickyname" />
+	    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp" >
+		<LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:focusableInTouchMode="true"
+	        android:padding="5dp" >
+
+	        <TextView
+	            android:id="@+id/fdResult"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="25dp"
+	            android:text="@string/tv_nickyname"
+	            android:textColor="@color/text_secend_title"
+	            android:textSize="@dimen/text_size_small" />
+
+	        <TextView
+	            android:id="@+id/tv_nickyname"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dp"
+	            android:textColor="@color/text"
+	            android:textSize="@dimen/text_size_small" />
+	        
+	        </LinearLayout>
+        <TextView
+            android:id="@+id/tvReplyTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:padding="5dp"
+            android:textColor="@color/text_normal"
+            android:text="@string/set_nickyname_to_login"
+            android:textSize="@dimen/text_size_mini" />
+
+        <EditText
+            android:id="@+id/nickyname_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/selecter_text_input"
+            android:textColor="@color/dark_gray"
+            android:ems="20"
+            android:singleLine="true" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="20dp"
+		    android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+		    android:orientation="vertical" >
+		<Button
+            android:id="@+id/btn_change_sure"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/selector_button_save"
+            android:text="@string/button_ok"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_medium" />
+		</LinearLayout>
+		</LinearLayout>
+</ScrollView>
+</RelativeLayout>

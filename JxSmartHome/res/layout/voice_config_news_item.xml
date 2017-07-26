@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical" >
+    <RelativeLayout 
+        
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+	    <TextView 
+	        android:id="@+id/voice_item_title"
+	        style="@style/app_normal_textview_match"
+	        android:visibility="gone"
+	        android:singleLine="true"/>
+		<TextView 
+		    android:id="@+id/voice_item_content"
+		    style="@style/app_normal_textview_match"
+		    android:layout_below="@id/voice_item_title"
+		    android:maxLines="5"
+		    android:textSize="@dimen/text_size_medium"/>
+		<CheckBox 
+	        android:id="@+id/voice_tiemer_multiple_choice"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_alignParentRight="true"
+	        android:button="@drawable/selector_multiple_button"
+	        android:visibility="invisible"/>
+		
+		<ImageView 
+		    android:id="@+id/voice_temer_menu"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:padding="5dp"
+			android:layout_marginLeft="15dp"
+		    android:layout_below="@id/voice_item_content"
+		    android:layout_alignParentLeft="true"
+		    android:src="@drawable/icon_menu_open"
+		    android:contentDescription="@string/default_img_desc"/>
+		<ImageView
+		    android:id="@+id/voice_temer_delete"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:padding="5dp"
+			android:layout_marginRight="15dp"
+		    android:layout_below="@id/voice_item_content"
+		    android:layout_alignParentRight="true"
+		    android:src="@drawable/icon_menu_delete"
+		    android:contentDescription="@string/default_img_desc"/>
+	</RelativeLayout>
+	<LinearLayout 
+	    android:id="@+id/voice_hide_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/white"
+	    android:paddingLeft="8dp"
+	    android:paddingRight="8dp"
+		android:paddingTop="5dp"
+		android:paddingBottom="5dp"
+	    android:visibility="gone"
+	    android:orientation="horizontal">
+	    <TextView 
+	        android:id="@+id/timer_voice_title"
+	        style="@style/app_normal_textview_wrap"
+	        android:singleLine="true"
+	        android:layout_marginLeft="5dp" />
+	    <TextView 
+	        android:id="@+id/timer_voice_time"
+	        style="@style/app_normal_textview_wrap"
+	        android:singleLine="true"
+	        android:layout_weight="1"
+	        android:gravity="center_horizontal" />
+	    <CheckBox 
+	        android:id="@+id/voice_tiemer_check_iv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="5dp"
+	        android:button="@drawable/selector_voice_toggle_btn"
+	        android:contentDescription="@string/default_img_desc"/>
+	</LinearLayout>
+</LinearLayout>

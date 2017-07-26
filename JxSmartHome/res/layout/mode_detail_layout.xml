@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/top_line"/>
+    
+    <ExpandableListView 
+        android:id="@+id/mode_device_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawSelectorOnTop="false"
+        android:fastScrollEnabled="true"
+        android:scrollbars="none"
+        android:padding="5dp"
+        android:groupIndicator="@null" >
+        
+    </ExpandableListView>
+
+</LinearLayout>

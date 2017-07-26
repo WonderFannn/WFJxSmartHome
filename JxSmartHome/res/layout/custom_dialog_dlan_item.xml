@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:orientation="horizontal" >
+    <LinearLayout
+        android:id="@+id/dlna_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+	    <TextView 
+	        android:id="@+id/dlna_device_name"
+	        android:layout_width="0dp"
+			android:layout_height="wrap_content"
+	        android:padding="5dp"
+	        android:textColor="@color/text_color"
+	        android:layout_weight="1"/>
+		<ImageView
+		    android:id="@+id/dlna_chose_btn"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:padding="5dp"
+		    android:layout_marginRight="5dp"
+		    android:src="@drawable/ico_add_save"
+		    android:visibility="invisible"
+		    android:contentDescription="@string/default_img_desc" />
+	</LinearLayout>
+</LinearLayout>

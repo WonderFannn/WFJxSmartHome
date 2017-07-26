@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:gravity="center_vertical"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+    <RelativeLayout 
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/fdTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/feedback_item_title"
+            android:ellipsize="marquee"
+            android:maxLines="1"
+            android:gravity="center|left"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/fdCreTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/feedback_item_sub"
+            android:layout_below="@id/fdTitle"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/fdResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fdTitle"
+            android:layout_marginLeft="27dp"
+            android:maxLines="1"
+            android:ellipsize="marquee"
+            android:layout_toRightOf="@+id/fdCreTime"
+            android:text="TextView" />
+        
+    </RelativeLayout>
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:src="@drawable/ic_next" >
+    </ImageView>
+</LinearLayout>

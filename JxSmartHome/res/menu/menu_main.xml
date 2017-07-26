@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:alpha="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/main_button"
+        android:icon="@drawable/ico_set_button"
+        alpha:showAsAction="always"
+        android:title="@string/action_more">
+        <menu>
+            <item
+                android:id="@+id/action_message"
+                android:icon="@drawable/ico_pop_message"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/home_common_info_message"/>
+            <item
+                android:id="@+id/action_camera"
+                android:icon="@drawable/ico_pop_camera"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/home_common_info_camera"/>
+            <item
+                android:id="@+id/action_doorbell"
+                android:icon="@drawable/ico_pop_access"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/home_common_info_doorbell"/>
+            <item
+                android:id="@+id/action_kit"
+                android:icon="@drawable/ico_pop_kit"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/home_common_info_kit"/>
+            <item
+                android:id="@+id/action_door"
+                android:icon="@drawable/ico_pop_doorsafe"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/home_common_info_door"/>
+            <item
+                android:id="@+id/action_scan"
+                android:icon="@drawable/ico_pop_scan"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/home_common_info_scan"/>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.jinxin.jxsmarthome"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_page"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+<!--   应用到子账号  -->
+
+            <LinearLayout
+                android:id="@+id/li_apply_sub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tile_item_up_padding_top"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/tile_item_single_bg_selector"
+                    android:paddingRight="8dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/setting_apply_subuser"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <CheckBox
+                        android:id="@+id/setting_apply_subuser_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="10dp"
+                        android:button="@drawable/selector_mode_toggle_button"
+                        android:checked="false" />
+                </RelativeLayout>
+            </LinearLayout>
+<!--   输入源  -->
+
+            <com.jinxin.jxsmarthome.ui.widget.MapTextView
+                android:id="@+id/setting_music_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="@dimen/tile_item_up_padding_top"
+                android:background="@drawable/tile_item_first_bg_selector"
+                app:textKey="@string/setting_music_input"
+                app:textValue="@string/setting_music_input_usb" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/btn_hover_color" />
+<!--   扬声器  -->
+
+            <com.jinxin.jxsmarthome.ui.widget.MapTextView
+                android:id="@+id/setting_music_speaker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/tile_item_last_bg_selector"
+                app:textKey="@string/setting_music_speaker"
+                app:textValue="@string/setting_music_input_usb" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/btn_hover_color" />
+<!--   查看唤醒词  -->
+
+            <com.jinxin.jxsmarthome.ui.widget.MapTextView
+                android:id="@+id/setting_wake_word"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/tile_item_last_bg_selector"
+                app:textKey="@string/setting_wake_word" />
+<!--   九宫格  -->
+
+            <com.jinxin.jxsmarthome.ui.widget.MapTextView
+                android:id="@+id/setting_nine_delay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="@dimen/tile_item_up_padding_top"
+                android:background="@drawable/tile_item_first_bg_selector"
+                app:textKey="@string/setting_pattern_password_detect"
+                app:textValue="@string/setting_pattern_password_detect_time" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/btn_hover_color" />
+<!--   离线设置  -->
+- 
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/tile_item_middle_bg_selector"
+                android:paddingRight="8dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/setting_offline_on"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <CheckBox
+                    android:id="@+id/setting_enable_offline_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:button="@drawable/selector_mode_toggle_button"
+                    android:focusable="false" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/btn_hover_color" />
+<!--   语音控制设置  -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/tile_item_middle_bg_selector"
+                android:paddingRight="8dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/setting_voice_send_on"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <CheckBox
+                    android:id="@+id/setting_voice_send_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:button="@drawable/selector_mode_toggle_button" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/btn_hover_color" />
+<!--   在家免打扰  -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/tile_item_last_bg_selector"
+                android:paddingRight="8dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/warnning_shake_setting"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <CheckBox
+                    android:id="@+id/cb_shake_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:button="@drawable/selector_mode_toggle_button"
+                    android:checked="true"
+                    android:focusable="false"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/btn_hover_color" />
+<!--   是否开始自定义唤醒  -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/tile_item_last_bg_selector"
+                android:paddingRight="8dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/open_custom_wakeup_setting"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <CheckBox
+                    android:id="@+id/custom_wake_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:button="@drawable/selector_mode_toggle_button"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout 
+        android:id="@+id/timer_bottom"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_footer"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/timer_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_timer_state"
+            android:scaleType="centerCrop"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/default_img_desc" />
+
+    </RelativeLayout>
+    
+    <ListView 
+        android:id="@+id/timer_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/timer_bottom"
+        android:cacheColorHint="@null"
+        android:descendantFocusability="blocksDescendants">
+    </ListView>
+    
+</RelativeLayout>

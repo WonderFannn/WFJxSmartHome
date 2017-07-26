@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/top_line" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:background="@drawable/textbox" >
+
+            <RelativeLayout
+                android:id="@+id/rlMsgBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp" >
+
+                <TextView
+                    android:id="@+id/tvCreTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="8dp"
+                    android:text="TextView"
+                    android:textColor="@color/feedback_item_sub" />
+
+                <TextView
+                    android:id="@+id/tvMsgTypeI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_toRightOf="@+id/tvCreTime"
+                    android:text="TextView"
+                    android:textColor="@color/feedback_item_sub" />
+
+                <TextView
+                    android:id="@+id/tvMsg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvCreTime"
+                    android:layout_margin="8dp"
+                    android:textColor="@color/feedback_item_title" >
+                </TextView>
+
+                <com.zhy.imageloader.FlowLayout
+                    android:id="@+id/flContainer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvMsg"
+                    android:layout_margin="8dp" >
+                </com.zhy.imageloader.FlowLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlReplyBody"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/rlMsgBody"
+                android:padding="0dp"
+                android:visibility="gone" >
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_margin="-8dp"
+                    android:background="@color/divider_line" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/line"
+                    android:padding="8dp" >
+
+                    <TextView
+                        android:id="@+id/tvReplyTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/feedback_item_sub" />
+
+                    <TextView
+                        android:id="@+id/tvResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_toRightOf="@id/tvReplyTime"
+                        android:text="@string/feedback_result"
+                        android:textColor="@color/feedback_item_sub" />
+
+                    <TextView
+                        android:id="@+id/tvReplyMsg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvReplyTime"
+                        android:layout_margin="8dp"
+                        android:text="TextView"
+                        android:textColor="@color/feedback_item_title" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

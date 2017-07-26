@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/btn_hover_color">
+    <RelativeLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:paddingTop="8dp"
+    	android:paddingBottom="8dp"
+    	android:layout_marginTop="3dp"
+    	android:background="@color/white">
+   	<ImageView 
+           android:id="@+id/item_icon"
+           android:layout_width="48dp"
+           android:layout_height="48dp"
+           android:src="@drawable/icon_default"
+           android:layout_marginLeft="10dp"
+           android:contentDescription="@string/default_img_desc"/>
+    <TextView
+        android:id="@+id/group_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/item_icon"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/text_color_light"
+        android:textSize="@dimen/text_size_small" />
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ico_big_arrow_close"
+        android:contentDescription="@string/default_img_desc"
+        android:visibility="visible" />
+	</RelativeLayout>
+</RelativeLayout>

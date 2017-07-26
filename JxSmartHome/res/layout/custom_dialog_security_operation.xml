@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical" >
+    
+    <Button 
+        android:id="@+id/send_security_open"
+        style="@style/button_style"
+        android:text="@string/home_security_open" />
+    
+    <Button 
+        android:id="@+id/send_security_close"
+        style="@style/button_style"
+        android:text="@string/home_security_close" />
+    
+    <Button 
+        android:id="@+id/send_voice_cancel"
+        style="@style/button_style"
+        android:layout_marginTop="1dp"
+        android:text="@string/control_voice_cancel" />
+</LinearLayout>

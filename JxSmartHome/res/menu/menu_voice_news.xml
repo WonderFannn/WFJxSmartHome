@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:alpha="http://schemas.android.com/apk/res-auto">
+	
+    <item 
+        android:id="@+id/choose_voice_language"
+        android:icon="@drawable/icon_language_choose"
+        android:title="@string/action_more"
+        alpha:showAsAction="always">
+	</item>
+    <item 
+        android:id="@+id/play_voice_btn"
+        android:icon="@drawable/icon_voice_play"
+        android:title="@string/action_more"
+        alpha:showAsAction="always">
+	</item>
+    <item
+        android:icon="@drawable/ico_set_button"
+        alpha:showAsAction="always"
+        android:title="@string/action_more">
+        <menu>
+            <item
+                android:id="@+id/action_music_input"
+                android:icon="@drawable/ico_pop_camera"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/music_choose_input"/>
+            <item
+                android:id="@+id/action_music_speaker"
+                android:icon="@drawable/ico_pop_camera"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/music_chose_speaker"/>
+            <item
+                android:id="@+id/action_music_amplifier"
+                android:icon="@drawable/ico_pop_camera"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/music_choose_amplifier"/>
+        </menu>
+    </item>
+
+</menu>

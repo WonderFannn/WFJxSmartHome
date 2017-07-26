@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fcf="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/btn_hover_color"
+    android:orientation="vertical" >
+	<View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/top_line"/>
+    <FrameLayout
+        android:id="@+id/add_timer_fregment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+				android:layout_margin="5dp"
+                android:background="@drawable/layout_bg" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:focusable="true" 
+					android:focusableInTouchMode="true" 
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/fdTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/timer_task_name"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_size_normal"/>
+
+                    <EditText
+                        android:id="@+id/et_task_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="5dp"
+                        android:maxEms="20"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_size_normal"
+                        android:background="@drawable/selecter_text_input"
+                        android:singleLine="true" />
+                </LinearLayout>
+                <View 
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/lightgray" />
+
+                <LinearLayout
+                    android:id="@+id/task_repeat_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tvReplyTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/timer_task_repeat"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_size_normal" />
+
+					<TextView
+					    android:id="@+id/add_repeat_text"
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+					    android:layout_marginBottom="5dp"
+					    android:layout_marginLeft="12dp"
+					    android:layout_marginRight="8dp"
+					    android:layout_marginTop="5dp"
+					    android:textColor="@color/text_color_light"
+					    android:textSize="@dimen/text_size_small" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/add_time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/layout_bg"
+                android:clickable="true"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:contentDescription="@string/default_img_desc"
+                    android:background="@drawable/add_timer_clcok_state" />
+
+                <TextView
+                    android:id="@+id/add_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_size_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/btn_hover_color"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2000dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                     >
+                    <LinearLayout
+		                android:id="@+id/add_mode_new_lv_li"
+		                android:layout_width="match_parent"
+		                android:layout_height="match_parent"
+		                android:orientation="vertical" >
+		
+		                <ListView
+	                        android:id="@+id/add_task_list"
+	                        android:layout_width="match_parent"
+	                        android:layout_height="match_parent"
+	                        android:background="@drawable/layout_bg"
+	                        android:scrollbars="none"
+	                        android:cacheColorHint="@color/transparent" >
+	                    </ListView>
+		            </LinearLayout>
+		            <LinearLayout
+		                android:layout_width="match_parent"
+		                android:layout_height="match_parent"
+		                android:orientation="vertical" >
+		                <com.xiaos.view.PinnedHeaderExpandableListView
+					        android:id="@+id/add_task_explistview"
+				        	android:childDivider="@color/btn_hover_color"
+					        android:layout_width="match_parent"
+					        android:layout_height="match_parent"
+					        android:cacheColorHint="#00000000"
+					        android:choiceMode="singleChoice"
+					        android:drawSelectorOnTop="false"
+					        android:fastScrollEnabled="false"
+					        android:footerDividersEnabled="true"
+					        android:groupIndicator="@null"
+					        android:scrollbars="vertical"
+					        android:scrollingCache="true" />
+		          
+		            </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutModeSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+	                android:background="@color/btn_hover_color"
+	                android:orientation="vertical" 
+	                android:paddingBottom="3dp"
+	               	android:paddingTop="3dp" >
+
+                <com.jinxin.jxsmarthome.ui.widget.fancyCoverFlow.FancyCoverFlow 
+                    android:id="@+id/fancyCoverFlow"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					fcf:maxRotation="15"
+					fcf:unselectedAlpha="0.4"
+					fcf:unselectedSaturation="0.0"
+					fcf:unselectedScale="0.4"
+					fcf:scaleDownGravity="0.5" />
+                
+                <com.jinxin.jxsmarthome.ui.widget.converflow.Converflow
+                    android:id="@+id/add_task_converflow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+            </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/btn_hover_color"
+    android:orientation="vertical"
+    tools:context=".DoorMagnetFragment" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="2dp" >
+
+            <Button
+                android:id="@+id/btn_doorlock_mode1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_right_selected_bg"
+                android:text="户外"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_medium" />
+
+            <Button
+                android:id="@+id/btn_doorlock_mode2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_left_unselect_bg"
+                android:text="居家"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_medium" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/iv_door_power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/default_img_desc"
+                android:padding="5dp"
+                android:src="@drawable/door_power_high_bg" />
+
+            <ImageView
+                android:id="@+id/iv_gas_warn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/default_img_desc"
+                android:padding="5dp"
+                android:src="@drawable/bg_gas"
+                android:visibility="gone" />
+            <ImageView
+                android:id="@+id/iv_power_warn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/default_img_desc"
+                android:padding="5dp"
+                android:src="@drawable/icon_power_warn"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btn_doorlock_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/selector_button_save"
+                android:text="@string/send_instruct"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_medium" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

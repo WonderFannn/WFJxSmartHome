@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:alpha="http://schemas.android.com/apk/res-auto">
+	
+    <item 
+        android:id="@+id/dlna_device_button"
+        android:icon="@drawable/icon_cloud_dlna"
+        android:title="@string/action_more"
+        alpha:showAsAction="always">
+	</item>
+    
+    <item
+        android:icon="@drawable/ico_set_button"
+        alpha:showAsAction="always"
+        android:title="@string/action_more">
+        <menu>
+            <item
+                android:id="@+id/action_music_input"
+                android:icon="@drawable/ico_pluto_input"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/music_choose_input"/>
+            <item
+                android:id="@+id/action_music_speaker"
+                android:icon="@drawable/ico_speaker"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/music_chose_speaker"/>
+            <item
+                android:id="@+id/action_music_amplifier"
+                android:icon="@drawable/ico_player"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/music_choose_amplifier"/>
+            <item
+                android:id="@+id/action_music_list"
+                android:icon="@drawable/ico_local_music"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/local_music_song_list"/>
+        </menu>
+    </item>
+
+</menu>

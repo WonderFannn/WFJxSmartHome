@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	android:layout_gravity="center" android:scrollbars="vertical">
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:gravity="center"
+		android:orientation="vertical">
+		<LinearLayout android:layout_width="wrap_content" android:gravity="center"
+			android:layout_height="wrap_content" android:orientation="horizontal">
+			<ImageView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:src="@drawable/wrist_small"
+				android:layout_gravity="center" android:id="@+id/part_img" />
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:textSize="18dip" android:id="@+id/part_alert" />
+		</LinearLayout>
+		<LinearLayout android:layout_width="fill_parent"
+			android:gravity="center" android:layout_height="wrap_content"
+			android:layout_marginTop="10dip" android:orientation="horizontal">
+			<Button android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:gravity="center"
+				android:layout_marginRight="10dip"
+				android:text="开始采集" android:id="@+id/begin_reg_btn" />
+			<Button android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:gravity="center"
+				 android:layout_marginRight="10dip"
+				android:text="清除注册" android:id="@+id/exit_reg_btn" />
+			<Button android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:gravity="center"
+				 android:layout_marginRight="10dip"
+				android:text="重新选择" android:id="@+id/reselect_rge_btn" />
+		</LinearLayout>
+	</LinearLayout>
+</ScrollView>

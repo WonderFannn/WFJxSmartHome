@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/head_line_orange"/>
+    
+    <Button 
+        android:id="@+id/door_update"
+        style="@style/button_style"
+        android:text="@string/home_door_get"/>
+    
+    <Button 
+        android:id="@+id/door_open"
+        style="@style/button_style"
+        android:text="@string/home_door_open"/>
+    
+    <Button 
+        android:id="@+id/door_close"
+        style="@style/button_style"
+        android:text="@string/home_door_close"/>
+    
+    <Button 
+        android:id="@+id/btn_no"
+        style="@style/button_style"
+        android:layout_marginTop="2dp"
+        android:text="@string/no"/>
+</LinearLayout>

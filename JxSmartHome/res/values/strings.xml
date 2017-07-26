@@ -1,0 +1,578 @@
+﻿<resources>
+
+    <string name="app_name">智慧家居</string>
+    <string name="back">返回</string>
+    <string name="save">保存</string>
+    <string name="yes">确定</string>
+    <string name="next_step">下一步</string>
+    <string name="no">取消</string>
+    <string name="warn">提示</string>
+    <string name="account:">用户名</string>
+    <string name="password:">密码</string>
+    <string name="account">您的账号：</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="switch_user">切换账号</string>
+    <string name="login">登 录</string>
+    <string name="add">添加</string>
+    <string name="editor">编辑</string>
+    <string name="no_editor">取消编辑</string>
+    <string name="exit_program">再按一次退出程序</string>
+    <string name="zhang_hu_mi_ma_bu_neng_wei_null">账户密码大网关ip和端口不能为空</string>
+    <string name="zhang_hu_deng_lu">账户登录&#8230;</string>
+    <string name="yong_hu_mi_ma_error">用户名或密码错误</string>
+    <string name="account_is_not_enable">账号已被禁用，请更换账号重新登录</string>
+    <string name="she_bei_geng_xin_jian_ce">设备列表更新检测&#8230;</string>
+    <string name="she_bei_gong_neng_geng_xin_jian_ce">设备功能更新检测&#8230;</string>
+    <string name="yong_hu_mo_shi_geng_xin_jian_ce">用户模式更新检测&#8230;</string>
+    <string name="mo_shi_gong_neng_geng_xin_jian_ce">模式功能更新检测&#8230;</string>
+    <string name="gong_neng_ming_xin_pei_zhi_jian_ce">功能明细配置更新检测&#8230;</string>
+    <string name="geng_xin_ding_shi_list">定时任务列表更新&#8230;</string>
+    <string name="geng_xin_ding_shi_cao_zuo_list">定时任务操作列表更新&#8230;</string>
+    <string name="mode_group_list">模式分组列表更新&#8230;</string>
+    <string name="geng_xin_gong_neng_ming_xi">更新功能明细&#8230;</string>
+    <string name="she_bei_chu_shi_hua">设备初始化&#8230;</string>
+    <string name="mode_combinations">模式组合</string>
+    <string name="device_control">设备控制</string>
+    <string name="mode_add">模式添加</string>
+    <string name="mode_icon_select">选择图标</string>
+    <string name="mode_amend">模式修改</string>
+    <string name="start_using">启用</string>
+    <string name="icon">图标</string>
+    <string name="mode_name">模式名称</string>
+    <string name="wait_please">请稍等&#8230;</string>
+    <string name="update_tips">更新提示</string>
+    <string name="update_now">立即更新</string>
+    <string name="editor_success">修改成功！</string>
+    <string name="sercert_querstion1">正在获取密保问题&#8230;</string>
+    <string name="button_ok">确  定</string>
+    <string name="go_back">返回</string>
+    <string name="old_secretkey">旧密码</string>
+    <string name="new_secretkey1">新密码</string>
+    <string name="confirm_secretkey">确认密码</string>
+    <string name="old_secret_not_null">请输入原密码</string>
+    <string name="new_secret_not_null">请设置新密码</string>
+    <string name="new_secret_confirm">请确认新密码</string>
+    <string name="change_secretkey">修改密码</string>
+    <string name="change_secretkey_title">重新设置您的账号密码</string>
+    <string name="set_safe_question_title">设置您的密保问题</string>
+    <string name="reset_password_success">密码重置成功</string>
+    <string name="forget_password_title">找回您的账号密码</string>
+    <string name="question_answer_title">请回答您的密保问题</string>
+    <string name="question_not_null">请选择密保问题</string>
+    <string name="question_answer_not_null">请回答密保问题</string>
+    <string name="string_input_password_err">密码输入有误！</string>
+    <string name="safe_question_is_null">未设置密保问题</string>
+    <string name="set_safe_question">设置密保问题</string>
+    <string name="et_pwd_diff">两次密码输入不一致！</string>
+    <string name="secret_question">密保问题</string>
+    <string name="forget_secret">找回密码</string>
+    <string name="question_1">密保问题一</string>
+    <string name="question_2">密保问题二</string>
+    <string name="mo_shi_ming_zi_bu_neng_kong">模式名字不能为空</string>
+    <string name="qing_xian_xuan_ze_she_bei">请先选择设备，再进行添加</string>
+    <string name="qing_xian_da_kai_she_bei">请先打开设备，再进行设置</string>
+    <string name="setting_already">已设置</string> 
+    <string name="remenber_key">记住密码</string>
+    <string name="copy_right1">重庆金鑫智慧科技有限公司</string>
+    <string name="copy_right2">（c）2010-2016 保留所有权利</string>
+    <string name="yong_hu_xin_xi_geng_xin">"用户信息更新&#8230;"</string>
+    <string name="bao_cun_zhong">"保存中&#8230;"</string>
+    <string name="tong_bu_shu_ju">"同步数据&#8230;"</string>
+    <string name="delete">"删除"</string>
+    <string name="shi_fou_shan_chu">"请确认是否删除该组合模式？"</string>
+    <string name="shi_fou_shan_chu_timer">"请确认是否删除该定时器？"</string>
+    <string name="xi_tong_mo_ren_mo_shi_bu_neng_shan_chu">"系统默认模式不允许删除！"</string>
+    <string name="qing_qiu_chu_li_zhong">"正在操作，请稍后&#8230;"</string>
+    <string name="gender">性　　别</string>
+    <string name="age">年　　龄</string>
+    <string name="address">通讯地址</string>
+    <string name="phone_no">联系电话</string>
+    <string name="location_detail">地理位置</string>
+    <string name="state">备　　注</string>
+    <string name="personal_info">个人信息</string>
+    <string name="change_key_success">修改密码成功</string>
+    <string name="safe_question_error">密保问题回答错误或密码有误</string>
+    <string name="safe_question_conmfir_error">密保问题验证失败</string>
+    <string name="change_nickyname">昵称</string>
+    <string name="safe_question_change_success">密保问题修改成功</string>
+    <string name="safe_question_change">密保</string>
+    <string name="safe_centre">安全中心</string>
+    <string name="set_nickyname">设置您的登录昵称</string>
+    <string name="set_nickyname_string_error">昵称不能为空或太短</string>
+    <string name="set_nickyname_success">昵称修改成功，已可以使用新昵称登录</string>
+    <string name="set_safe_question_tips">账号未设置密保，请先设置</string>
+    <string name="ban_ben_geng_xin">版本更新</string>
+    <string name="vein_retry_alert">提示</string>
+    <string name="update">更新</string>
+    <string name="action_settings">Settings</string>
+    <string name="infrared_control">无线红外控制</string>
+    <string name="update_db">程序数据库升级，请务必保持网络畅通，否则可能无法正常使用。</string>
+    <string name="light_color">灯光颜色</string>
+    <string name="light_color_setting">灯光颜色设置成功</string>
+    <string name="huo_qu_she_bei_zhuang_tai">正在获取设备状态&#8230;</string>
+    <string name="qing_qiu_fu_wu_chao_shi">网络连接异常，使用登录过的帐号可切换到离线模式</string>
+    <string name="zhao_dao_ke_yong_wang_guan">找到可用网关</string>
+    <string name="li_xian_mo_shi_qie_huan_chen_gong">已切换到离线模式</string>
+    <string name="sou_suo_wang_guan_error">搜索网关超时，请重试</string>
+    <string name="li_xian_mo_shi_mi_ma_error">密码验证失败，请使用上次成功登录的密码进行验证</string>
+    <string name="zheng_zai_lian_jie_wang_guan">正在连接本地网关&#8230;</string>
+    <string name="li_xian_cao_zuo_tips">离线模式不能进行此操作</string>
+    <string name="timer_task_name">任务名称</string>
+    <string name="timer_task_repeat">任务重复</string>
+    <string name="timer_task_add">定时任务添加</string>
+    <string name="timer_task_amend">定时任务修改</string>
+    <string name="timer_task_operation_not_null">请选择定时操作</string>
+    <string name="device_control_item_et_hint">请编辑名称</string>
+    <string name="default_img_desc">default image desc</string>
+    <string name="comm_loading_send_cmd_text">正在发送命令</string>
+    <string name="home_common_info_temperature">温度：</string>
+    <string name="home_common_info_lights">灯光</string>
+    <string name="home_common_info_door">门禁</string>
+    <string name="home_common_info_scan">扫一扫</string>
+    <string name="home_common_info_security">安防</string>
+    <string name="home_common_info_camera">监控</string>
+    <string name="home_common_info_message">消息</string>
+    <string name="home_door_get">获取门禁状态</string>
+    <string name="home_door_open">开启门禁</string>
+    <string name="home_door_close">关闭门禁</string>
+    <string name="control_dialog_cancel">取消</string>
+    <string name="home_security_open">开启安防</string>
+    <string name="home_security_close">关闭安防</string>
+    <string name="music">音乐播放</string>
+    <string name="music_list">播放列表</string>
+    <string name="test_string">测试字符串</string>
+    <string name="test_time">05:55</string>
+    <string name="test_number">1.</string>
+    <string name="music_mute">静音</string>
+    <string name="music_unmute">取消静音</string>
+    <string name="music_song_list">歌曲列表</string>
+    <string name="music_state">查询状态</string>
+    <string name="music_next">下一曲</string>
+    <string name="music_pre">上一曲</string>
+    <string name="music_play">播放</string>
+    <string name="music_pause">暂停</string>
+    <string name="music_choose_input">输入源</string>
+    <string name="music_chose_speaker">扬声器</string>
+    <string name="music_wake_word">唤醒词</string>
+    <string name="music_control_speaker">控制操作</string>
+    <string name="music_choose_amplifier">功放</string>
+    <string name="music_sound_add">音量 +</string>
+    <string name="music_sound_sub">音量 -</string>
+    <string name="music_collect">收藏</string>
+    <string name="music_delete">删除</string>
+    <string name="music_chose_speaker_title">选择扬声器</string>
+    <string name="music_load_more">点击加载更多&#8230;</string>
+    <string name="music_load_finish">加载完成</string>
+    <string name="music_load_success">没有更多歌曲了</string>
+    <string name="music_sync">同步歌曲列表</string>
+    <string name="music_warn_input">使用前请设置输入源</string>
+    <string name="music_warn_speaker">使用前请设置扬声器</string>
+    <string name="control_voice_watch">打开智能语音</string>
+    <string name="control_gesture_open">打开手势识别</string>
+    <string name="control_gesture_close">关闭手势识别</string>
+    <string name="control_voice_hint">请输入你要说的话&#8230;</string>
+    <string name="control_voice_send">发送</string>
+    <string name="control_voice_cancel">取消</string>
+    <string name="download_camera_app">下载摄像头软件</string>
+    <string name="download_camera_app_desc">摄像头的远程监控和控制需要其他组件支持，点击确定下载</string>
+    <string name="setting_catergroy_music">功放设置</string>
+    <string name="setting_music_input">功放输入源</string>
+    <string name="setting_music_speaker">功放扬声器</string>
+    <string name="setting_wake_word">查看唤醒词</string>
+    <string name="setting_music_volume">音量</string>
+    <string name="setting_music_mute">静音</string>
+    <string name="setting_music_pattern">模式</string>
+    <string name="setting_music_input_usb">USB</string>
+    <string name="set_nickyname_to_login">设置昵称可作为登录用户名</string>
+    <string name="li_xian_cao_zuo_error">离线模式不能进行此操作</string>
+    <string name="setting_catergory_offline">离线设置</string>
+    <string name="setting_catergory_voice">语音控制</string>
+    <string name="setting_catergory_user">同步</string>
+    <string name="setting_catergory_warning">报警设备在家模式免打扰设置</string>
+    <string name="setting_offline_on">打开离线切换</string>
+    <string name="setting_voice_send_on">语音控制自动发送</string>
+    <string name="setting_apply_subuser">同步到子账号</string>
+    <string name="setting_yes">是</string>
+    <string name="setting_no">否</string>
+    <string name="disable">禁用</string>
+    <string name="setting_catergory_password_pattern">九宫格</string>
+    <string name="setting_catergory_vein">静脉纹</string>
+    <string name="setting_password_pattern">九宫格</string>
+    <string name="tv_nickyname">正在使用的昵称：</string>
+    <string name="music_setting_inputs">选择输入源</string>
+    <string name="action_more">更多</string>
+    <string name="action_about">更多</string>
+    <string name="timer_title">定时控制</string>
+    <string name="task_name_not_null">任务名不能为空</string>
+    <string name="task_time_not_null">请选择任务触发周期或时间</string>
+    <string name="nine_string_one">绘制长度至少要连接4个点，请重新绘制!</string>
+    <string name="nine_string_two">请再次绘制一次加密图案</string>
+    <string name="nine_string_three">设置成功!</string>
+    <string name="nine_string_four">两次绘制的图案不一致，请重新绘制!</string>
+    <string name="nine_string_five">连续错误5次，请重新登录!</string>
+    <string name="nine_string_six">输入错误，您还有</string>
+    <string name="nine_string_seven">次机会尝试!</string>
+    <string name="nine_string_eight">设置失败，请重新绘制!</string>
+    <string name="finger_closed">手势解锁成功!</string>
+    <string name="title_my_device">我的设备</string>
+    <string name="title_set_pattern_password">设置九宫格密码</string>
+    <string name="device_detect">一键巡检</string>
+    <string name="enter_login_secretkey">请输入登录密码解锁</string>
+    <string name="login_secretkey">登录密码</string>
+    <string name="setting_pattern_password_detect">九宫格锁屏延时</string>
+    <string name="setting_vein_only">只进行静脉纹登录</string>
+    <string name="setting_vein_switch">运行切换密码登录</string>
+    <string name="setting_pattern_password_detect_time">15秒</string>
+    <string name="home_running_device_title">运行中的设备:</string>
+    <string name="home_category_common_device">常用设备</string>
+    <string name="home_category_common_pattern">常用模式</string>
+    <string name="home_category_common_device_security">安防控制</string>
+    <string name="home_category_common_device_tft">TFT控制</string>
+    <string name="home_category_common_device_env">环境监测</string>
+    <string name="home_category_common_device_music">音乐控制</string>
+    <string name="add_select_icon">选择图标</string>
+    <string name="add_comments">备注</string>
+    <string name="home_common_device_null">未设置常用设备</string>
+    <string name="title_my_account">我的账户</string>
+    <string name="send_instruct">巡检</string>
+    <string name="home_error_device">设备参数错误，发送命令失败!</string>
+    <string name="loading_exception">载入异常</string>
+    <string name="my_device_onekey_detect">一键巡检</string>
+    <string name="please_select_color_light">请选择要控制的设备</string>
+    <string name="checked_unchecked">禁用/启用</string>
+    <string name="comments_is_null">未设置备注</string>
+    <string name="comm_loading">&#8230;</string>
+    <string name="control_on">开机</string>
+    <string name="control_off">关机</string>
+    <string name="control_zero">0</string>
+    <string name="device_name_not_null">请输入设备名称</string>
+    <string name="sound_box_control">音箱控制</string>
+    <string name="remote_device_operation_tips">1、设置飞碟 \n2、点击按钮发送指令\n3、选择设备响应结果\n4、点击下方按保存遥控</string>
+    <string name="remote_board_is_null">很抱歉我们没有找到匹配您机型的模板\n您可用选择如下操作：</string>
+    <string name="remote_board_auto_operation">1.拨打24小时客服热线400-000-3877，我们的相关工作人员会为您提供技术支持 \n\n2.进入按键智能学习</string>
+    <string name="title_remote_match">智能对码</string>
+    <string name="title_remote_learn">智能学习</string>
+    <string name="result_is_null">未找到品牌数据</string>
+    <string name="remote_info_receive">正在接收红外信号...</string>
+    <string name="control_temp">当前温度</string>
+    <string name="control_clod">制冷</string>
+    <string name="control_hot">制热</string>
+    <string name="control_wet">加湿</string>
+    <string name="control_air">换气</string>
+    <string name="control_wd">温度</string>
+    <string name="control_fs">风速</string>
+    <string name="control_ds">定时</string>
+    <string name="control_dg">灯光</string>
+    <string name="control_sm">睡眠</string>
+    <string name="control_jn">节能</string>
+    <string name="pop_light_white">白灯</string>
+    <string name="pop_light_color">彩灯</string>
+    <string name="voice_to_sleep">休眠</string>
+    <string name="air_cleaner">空气净化器</string>
+    <string name="air_condition">空调</string>
+    <string name="projector">投影仪</string>
+    <string name="fan">风扇</string>
+    <string name="tv_box">机顶盒</string>
+    <string name="tv">电视</string>
+    <string name="internet_tv">网络电视</string>
+    <string name="dvd">DVD</string>
+    <string name="calorifie">热水器</string>
+    <string name="camera">单反相机</string>
+    <string name="waiting">敬请期待</string>
+    <string name="intelligent_match">智能匹配</string>
+    <string name="match_reminder_1">设备需要时间来响应你的操作\n还请你操作后适当等待一下</string>
+    <string name="match_reminder_2">若按键正常响应即可点击下一步进行保存\n若未响应请切换下一组按键进行测试</string>
+
+    <!-- 静脉纹识别 -->
+    <string-array name="btn_str">
+        <item>保存</item>
+        <item>注册</item>
+        <item>退出</item>
+    </string-array>
+
+    <string name="msg_title">提示信息</string>
+
+    <string-array name="mode_str">
+        <item>静脉手动注册</item>
+        <item>静脉手动认证</item>
+        <item>静脉自动认证</item>
+        <item>静脉自动注册</item>
+    </string-array>
+
+    <string name="msg_reg_1">第一次采集</string>
+    <string name="msg_reg_2">第二次采集</string>
+    <string name="msg_reg_3">第三次采集</string>
+    <string name="msg_reg_diff">检测到采集位置不一致，请采集相同部位相同位置</string>
+    <string name="msg_reg_ok">静脉注册成功</string>
+    <string name="msg_continue_reg">继续注册</string>
+    <string name="msg_pre_ident">验证注册</string>
+    <string name="msg_sel_reg_part">请选择注册部位</string>
+    <string name="msg_sel_auth_part">请选择验证部位</string>
+    <string name="msg_start_auth">静脉验证</string>
+    <string name="msg_auth_success">认证成功</string>
+    <string name="msg_auth_failure">认证失败,请重试!</string>
+    <string name="msg_part_alert">静脉注册提示</string>
+    <string name="msg_no_skin">没有检测到皮肤&#8230;</string>
+    <string name="msg_skin_ok">检测到皮肤&#8230;</string>
+    <string name="msg_auto_focus">正在对焦&#8230;</string>
+    <string name="msg_reging">正在注册静脉&#8230;</string>
+    <string name="msg_authing">正在验证静脉&#8230;</string>
+    <string name="msg_auth_retry">请动一下，正在重试&#8230;</string>
+    <string name="msg_reg_demo">注册演示</string>
+    <string name="msg_auth_demo">认证演示</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_retry">重试</string>
+    <string name="btn_sure">确定</string>
+    <string name="msg_sdk_fail">对不起，SDK初始化失败！</string>
+    <string name="msg_sdk_timeout">对不起，您的软件使用期限已经过期！</string>
+
+    <string-array name="vein_part">
+        <item>手腕</item>
+        <item>手背</item>
+        <item>手掌</item>
+        <item>退出</item>
+        <item></item>
+    </string-array>
+    <string-array name="vein_part_alert">
+        <item> 自然张紧手腕,手机与手腕平行,保持手腕图像在引导线附近,红框内为静脉图像采集区域</item>
+        <item> 自然握拳,手机与手背平行,保持手背图像在引导线附近,红框内为静脉图像采集区域</item>
+        <item> 自然张开手掌,五指自然伸展，手机与手掌平行,保持手掌图像在引导线附近,红框内为静脉图像采集区域</item>
+    </string-array>
+
+    <string name="sys_setting">设置</string>
+    <string name="btn_regist">注册</string>
+    <string name="btn_delete">删除</string>
+    <string name="btn_save">保存</string>
+    <string name="btn_exit">退出</string>
+    <string name="btn_ok">确 定</string>
+    <string name="msg_set_reboot">设置已更改!请重新启动软件有效</string>
+    <string name="reg_demo">注册演示</string>
+    <string name="auth_demo">认证演示</string>
+    <string name="set_system">系统设置</string>
+    <string name="continue_reg">请再采集一次</string>
+    <string name="msg_reg_failure">Registered data is invalid because of vein feature is too few</string>
+    <string name="start_reg">开始采集</string>
+    <string name="alert">提示：</string>
+    <string name="setting_password_vein">静脉纹识别</string>
+    <string name="password_nine_switch">启用九宫格</string>
+    <string name="password_vein_switch">启用静脉纹</string>
+    <string name="title_system_setting">系统设置</string>
+    <string name="warnning_shake_setting">报警设备在家模式免打扰</string>
+    <string name="open_custom_wakeup_setting">切换自定义唤醒</string>
+    <string name="title_version_info">关于智慧家居</string>
+    <string name="title_my_connection_device"> 我的关联</string>
+    <string name="title_sub_account">子账号</string>
+    <string name="title_message_receive">消息提醒</string>
+    <string name="title_version">当前版本</string>
+    <string name="title_feedback">意见反馈</string>
+    <string name="clean_cache">清除缓存</string>
+    <string name="user_logout">退出账号</string>
+    <string name="title_relative_account">亲情账号</string>
+    <string name="voice_control_type1">设备小助手</string>
+    <string name="voice_control_type1_1">切换设备</string>
+    <string name="voice_control_type2">遥控小助手</string>
+    <string name="voice_control_type2_1">切换遥控</string>
+    <string name="voice_control_type3">音乐小助手</string>
+    <string name="voice_control_type3_1">切换音乐</string>
+    <string name="voice_control_change_tips1">已切换到模式控制</string>
+    <string name="voice_control_change_tips2">已切换到遥控控制模式</string>
+    <string name="voice_control_change_tips3">已切换到音乐播放模式</string>
+    <string name="button_usable">好用</string>
+    <string name="button_unusable">不好用</string>
+    <string name="btn_submit">提交</string>
+    <string name="feedback_suggest">请反馈你的意见和建议</string>
+    <string name="feedback_contact">你的联系方式</string>
+    <string name="feedback_contact_tip">电话/QQ/邮箱</string>
+    <string name="version_desc">\u0020\u0020\u0020\u0020\u0020\u0020“人在外，身边就是家”，BEONE智慧家居是金鑫智慧在信息化时代
+	    推出的完美居住生活解决方案，它通过互联网、广电网、电力网等多网融合
+	    的网络平台，把所有设备通过传感器与之互联，将改变人们的传统生活方式。</string>
+    <string name="version_code_desc">扫描二微码关注智慧家居</string>
+    <string name="version_copyright_desc">金鑫智慧  版权所有\nCopyright(C) 2011-2014 BEONE.All Right  Reserved</string>
+    <string name="feedback_fill_alert">请填写反馈意见</string>
+    <string name="feedback_submit_aler">提交中....</string>
+    <string name="feedback_success_aler">意见反馈成功</string>
+    <string name="subaccount_no">没有子账号</string>
+    <string name="mode_contorl_success">操作成功</string>
+    <string name="mode_contorl_fail">操作失败</string>
+    <string name="mode_contorl_fail_any">部分设备操作失败</string>
+    <string name="mode_contorl_fail_net">网络不给力</string>
+    <string name="operate_invalid_work">当前不可操作，请稍后再试</string>
+    <string name="unit_minute">分钟</string>
+    <string name="unit_second">秒</string>
+    <string name="msg_select_user_aler">请选择账号</string>
+    <string name="msg_select_user">选择登录账号</string>
+    <string name="pop_light_fade">渐变度</string>
+    <string name="pop_light_time">渐变时间</string>
+    <string name="pop_light_fade_bright">渐亮</string>
+    <string name="pop_light_fade_dark">渐暗</string>
+    <string name="pop_light_stop">停止</string>
+    <string name="home_common_info_doorbell">门铃</string>
+    <string name="home_common_info_kit">猫眼</string>
+    <string name="hello">Hello World, XListViewActivity!</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载&#8230;</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="subaccount_cao_zuo_error_tips">子账号不能进行此操作</string>
+    <string name="cloud_music_song_list">云音乐</string>
+    <string name="local_music_song_list">本地音乐</string>
+    <string name="cloud_music_singer">歌手</string>
+    <string name="cloud_music_song">歌名</string>
+    <string name="cloud_music_play_time">00:00</string>
+    <string name="action_open_door">开门</string>
+    <string name="action_close_door">关门</string>
+    <string name="action_getstate_door">查询</string>
+    <string name="action_build_net">组网</string>
+    <string name="voice_play_by_order">全部播放</string>
+    <string name="voice_multiple_choice">多选播放</string>
+    <string name="voice_random_play">随机播放</string>
+    <string name="voice_news_timer_title">定时</string>
+    <string name="voice_news_timer_null">未设置定时新闻播报，点击设置</string>
+    <string name="message_receive_timer_null">未设置消息定时接收，点击上方按钮设置</string>
+    <string name="realtive_account_null">未设置亲情账号，点击上方按钮添加</string>
+
+    <!-- 请替换成在语音云官网申请的appid -->
+    <string name="app_id">546b0767</string>
+    <string name="voice_hint">说点儿什么吧&#8230;</string>
+    <string name="text_begin">请开始说话&#8230;</string>
+    <string name="wake_app_tips">已开启语音唤醒服务，如需使用麦克风功能请先退出本应用</string>
+    <string name="veinLoadFail">静脉纹异常,切换到账号登录</string>
+    <string name="splash_initing">正在初始化</string>
+
+    <!-- zxing -->
+    <string name="msg_bulk_mode_scanned">批量扫描：找到条码，已保存</string>
+    <string name="msg_camera_framework_bug">抱歉，Android相机出现问题。您可能需要重启设备。</string>
+    <string name="msg_default_format">格式</string>
+    <string name="msg_default_meta">元数据</string>
+    <string name="msg_default_mms_subject">Hi</string>
+    <string name="msg_default_status">请将条码置于取景框内扫描。  </string>
+    <string name="msg_default_time">时间</string>
+    <string name="msg_default_type">类型</string>
+    <string name="msg_encode_contents_failed">无法根据已有数据生成条码。   </string>
+    <string name="msg_google_books">谷歌图书</string>
+    <string name="msg_google_product">谷歌购物</string>
+    <string name="msg_google_shopper_missing">谷歌购物未安装</string>
+    <string name="msg_install_google_shopper">谷歌购物是一款将条码扫描和商品比价相结合的应用，谷歌购物不使用浏览器，您想尝试吗？</string>
+    <string name="msg_intent_failed">抱歉，无法打开所需软件。 条码内容可能无效。</string>
+    <string name="msg_redirect">重定向</string>
+    <string name="msg_sbc_book_not_searchable">抱歉，无法找到此图书。</string>
+    <string name="msg_sbc_failed">抱歉，搜索时遇到错误。</string>
+    <string name="msg_sbc_no_page_returned">无页面返回</string>
+    <string name="msg_sbc_page">页面</string>
+    <string name="msg_sbc_results">结果</string>
+    <string name="msg_sbc_searching_book">搜索图书…</string>
+    <string name="msg_sbc_snippet_unavailable">摘录不可用</string>
+    <string name="msg_sbc_unknown_page">未知页面</string>
+    <string name="msg_share_explanation">您可以通过在自己的手机上显示条码，并使用其它手机扫描此条码的方式进行分享</string>
+    <string name="msg_share_subject_line">这是我所扫描条码的内容</string>
+    <string name="msg_share_text">或键入一些文字</string>
+    <string name="msg_sure">你肯定吗？</string>
+    <string name="msg_unmount_usb">抱歉，SD卡不可访问。</string>
+    <string name="result_address_book">找到联系人信息</string>
+    <string name="result_calendar">找到日历事件</string>
+    <string name="result_email_address">找到email地址</string>
+    <string name="result_geo">找到地理坐标</string>
+    <string name="result_isbn">找到图书</string>
+    <string name="result_product">找到产品</string>
+    <string name="result_sms">找到短信地址</string>
+    <string name="result_tel">找到电话号码</string>
+    <string name="result_text">找到纯文本</string>
+    <string name="result_uri">找到URL</string>
+    <string name="result_wifi">发现网络配置</string>
+    <string name="sbc_name">Google图书搜索</string>
+    <string name="share_name">通过条码分享</string>
+    <string name="wifi_changing_network">请求连接到网络\u2026</string>
+    <string name="wifi_ssid_label">网络SSID</string>
+    <string name="wifi_type_label">类型</string>
+    <string name="contents_contact">联系人信息</string>
+    <string name="contents_email">Email地址</string>
+    <string name="contents_location">地理坐标</string>
+    <string name="contents_phone">电话号码</string>
+    <string name="contents_sms">短信地址</string>
+    <string name="contents_text">纯文本</string>
+    <string name="operation_delay">操作延时</string>
+    <string name="click_to_select_device">点击选择设置点</string>
+    <string name="open">开</string>
+    <string name="close">关</string>
+    <string name="delete_curr">删除当前</string>
+    <string name="delete_all">删除所有</string>
+    <string name="delete_confirm_text">选择删除该设置点\n当前关联或所有关联</string>
+    <string name="border_top">Border Top</string>
+    <string name="border_bottom">Border Bottom</string>
+    <string name="image_url">Image Url</string>
+    <string name="title_picture_view">图片预览</string>
+    <string name="title_picture_select">选择图片</string>
+    <string name="feedback_his">反馈记录</string>
+    <string name="feedback_camera">拍照</string>
+    <string name="feedback_album">打开相册</string>
+    <string name="feedback_pick_msgType">请选择问题类型</string>
+    <string name="feedback_result">处理结果</string>
+    <string name="feedback_type_default">缺陷问题</string>
+    <string name="feedback_uploading_file">正在处理中...</string>
+    <string name="feedback_upload_max">你最多能上传9张图片</string>
+    <string name="feedback_pick_max">你最多能选择9张图片</string>
+    <string name="feedback_uplod_success">上传成功</string>
+    <string name="feedback_uplod_fail">上传失败,请检查网络</string>
+
+    <!-- 声纹锁 -->
+    <string name="voice_lock">声纹锁</string>
+    <string name="voice_lock_open">声纹锁已开启</string>
+    <string name="voice_lock_close">声纹锁已关闭</string>
+    <string name="voice_lock_login">声纹登录</string>
+    <string name="password_login">密码登录</string>
+    <string name="reset_voice_lock_pwd">设置声纹锁</string>
+    <string name="confirm_voice_lock_pwd">验证声纹</string>
+    <string name="open_voice_lock_tips">登录时可使用声音登录</string>
+    <string name="voice_lock_reg_tips">您已设置声纹锁，如需重设声音请先删除</string>
+    <string name="open_voice_unreg_tips">您未设置声纹锁，请先注册声音</string>
+    <string name="voice_login_password_tips">请贴近手机麦克风，匀速读出下方数字</string>
+
+    <!-- U 盟 -->
+    <string name="umeng_appkey">56385cd0e0f55a188b0015a7</string>
+    <string name="take_a_break">操作太快了，休息一下吧</string>
+
+    <!-- Pluto音箱 -->
+
+    <string name="pluto_on">已开启</string>
+    <string name="pluto_off">已关闭</string>
+    <string name="pluto_status">状态</string>
+    <string name="query_failed">查询失败</string>
+    <string name="mute_invalid">当前处于静音状态，音量不可调控</string>
+
+    <string-array name="pluto_input">
+        <item>WIFI</item>
+        <item>Bluetooth</item>
+        <item>CD</item>
+        <item>PC</item>
+        <item>AV</item>
+    </string-array>
+    <string-array name="multi_switches">
+        <item>键一</item>
+        <item>键二</item>
+        <item>键A</item>
+        <item>键B</item>
+        <item>键C</item>
+        <item>键D</item>
+    </string-array>
+    <string-array name="three_switches">
+        <item>键一</item>
+        <item>键二</item>
+        <item>键三</item>
+        <item>键A</item>
+        <item>键B</item>
+        <item>键C</item>
+    </string-array>
+    <string-array name="infrared_control_gridview">
+        <item>电视机</item>
+        <item>空调</item>
+        <item>多功能</item>
+    </string-array>
+
+    <!-- 五路开关 -->
+    <string name="five_switch">五路开关</string>
+    <!-- big gateway ip and port -->
+    <string name="test_gateway_ip">大网关ip和端口port</string>
+
+</resources>

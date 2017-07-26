@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/top_line" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp" >
+
+                <TextView
+                    android:id="@+id/tvMsgType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:text="@string/feedback_pick_msgType"
+                    android:textSize="16sp" />
+
+                <com.zhy.imageloader.BetterSpinner
+                    android:id="@+id/spinnerMsgType"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@id/tvMsgType"
+                    android:background="@drawable/bg_spinner"
+                    android:text="@string/feedback_type_default"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp" >
+
+                <EditText
+                    android:id="@+id/editTextSuggest"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="2dp"
+                    android:hint="@string/feedback_suggest"
+                    android:background="@color/transparent"
+                    android:gravity="left|top"
+                    android:inputType="none"
+                    android:maxLength="600"
+                    android:minHeight="80dp"
+                    android:textSize="16sp" />
+
+                <com.zhy.imageloader.FlowLayout
+                    android:id="@+id/flContainer"
+                    android:layout_width="fill_parent"
+                    android:layout_marginBottom="2dp"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/ivAddPic"
+                        android:layout_width="48dp"
+                        android:layout_height="56dp"
+                        android:paddingTop="8dp"
+                        android:src="@drawable/ic_add_pic"
+                        android:scaleType="fitXY"
+                        android:onClick="onClick" />
+                </com.zhy.imageloader.FlowLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/feedback_contact"
+                android:textSize="@dimen/text_size_normal" />
+
+            <EditText
+                android:id="@+id/editTextContact"
+                android:layout_width="fill_parent"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:background="@@color/white"
+                android:hint="@string/feedback_contact_tip"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/selector_button_save"
+                android:onClick="onClick"
+                android:text="@string/btn_submit"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

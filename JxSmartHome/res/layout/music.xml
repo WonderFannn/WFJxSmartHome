@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/play_music_bg">
+
+    <LinearLayout
+        android:id="@+id/music_ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/transparent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <ImageView
+                android:id="@+id/music_iv_pre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:contentDescription="@string/test_string"
+                android:src="@drawable/selecter_music_pre_song" />
+
+            <ImageView
+                android:id="@+id/music_iv_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:contentDescription="@string/test_string"
+                android:src="@drawable/selecter_music_play" />
+
+            <ImageView
+                android:id="@+id/music_iv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:contentDescription="@string/test_string"
+                android:src="@drawable/selecter_music_next_song" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <ImageView
+                android:id="@+id/set_iv_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/selector_btn_music_unmute"
+                android:contentDescription="@string/test_string" />
+            <ImageView
+                android:id="@+id/iv_music_repeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ico_cycle"
+                android:contentDescription="@string/test_string" />
+            
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout 
+        android:id="@+id/ll_music_name"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_above="@id/music_ll_bottom"
+        android:background="@color/transparent">
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/default_ptr_rotate"/>
+	    <TextView
+	        android:id="@+id/music_play_name"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="match_parent"
+	        android:textColor="@color/white"
+	        android:text="未知歌曲"
+	        android:gravity="center"
+	        android:singleLine="true"
+	        android:textSize="@dimen/text_size_medium" />
+        <ImageView 
+            android:id="@+id/iv_update_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/default_ptr_rotate"/>
+    </LinearLayout>
+
+    <!--
+         <include 
+	    android:layout_width="match_parent"
+	    android:layout_height="60dp"
+	    android:layout_above="@id/music_ll_bottom"
+	    layout="@layout/music_hide_control"/>
+    -->
+
+    <RelativeLayout
+        android:id="@+id/music_fl_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_music_name" >
+	<!-- <com.jinxin.jxsmarthome.ui.widget.RoundImageView
+	    android:id="@+id/music_iv_play_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/default_play_cover"
+	    android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        imagecontrol:border_inside_color="#fff7f2e9"
+        imagecontrol:border_outside_color="#ffd5d1c8"
+        imagecontrol:border_thickness="2dp" /> -->
+        <ImageView
+            android:id="@+id/music_iv_play_cover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/test_string"
+            android:padding="40dp"
+            android:src="@drawable/default_play_cover" />
+
+    </RelativeLayout>
+
+    <TextView  
+        android:id="@+id/tv_music_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp"
+        android:textColor="@color/text_normal"
+        android:text="版本号"/>
+</RelativeLayout>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home_page"
+    android:orientation="vertical" >
+	
+	<LinearLayout
+            android:id="@+id/mode_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@color/lightgray"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+            
+	    <com.jinxin.jxsmarthome.ui.widget.MyGalleryLayout 
+	        android:id="@+id/mode_gallery_layout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	    </com.jinxin.jxsmarthome.ui.widget.MyGalleryLayout>
+    </LinearLayout>
+    
+    <GridView
+        android:id="@+id/gridView_mode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:horizontalSpacing="5dp"
+        android:numColumns="3"
+        android:paddingTop="5dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp"
+        android:background="@color/transparent"
+        android:scrollbars="none" >
+
+    </GridView>
+
+</LinearLayout>

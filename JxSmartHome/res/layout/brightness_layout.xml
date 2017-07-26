@@ -1,0 +1,224 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roundProgress="http://schemas.android.com/apk/res/com.jinxin.jxsmarthome"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_view"
+    tools:context=".LightFragment" >
+	<RelativeLayout 
+	    android:id="@+id/color_select_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:focusable="true"
+	    android:clickable="true" >
+	    <FrameLayout
+	        android:id="@+id/main_panel"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingTop="30dp"
+	        android:paddingBottom="30dp"
+	        android:layout_centerHorizontal="true"
+	        android:layout_centerVertical="true" >
+	
+	        <ImageView 
+	            android:layout_gravity="center" 
+	            android:background="@color/transparent" 
+	            android:layout_width="wrap_content" 
+	            android:layout_height="wrap_content" 
+	            android:src="@drawable/bg_panel" />
+	        <ImageView 
+	            android:layout_gravity="center" 
+	            android:background="@color/transparent" 
+	            android:layout_width="wrap_content" 
+	            android:layout_height="wrap_content" 
+	            android:src="@drawable/btn_power" />
+	        
+	        <ImageView 
+	            android:layout_gravity="center" 
+	            android:background="@color/transparent" 
+	            android:layout_width="wrap_content" 
+	            android:layout_height="wrap_content" 
+	            android:src="@drawable/bg_track" />
+	        <com.jinxin.widget.progressBar.CircleProgress
+	            android:id="@+id/roundBar1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center"
+	            android:background="@drawable/bg_track"
+	            roundProgress:Inside_Interval="20"
+	            roundProgress:Paint_Color="0xff0000ff"
+	            roundProgress:Paint_Width="5"
+	            roundProgress:fill="false"
+	            roundProgress:max="100" />
+
+	        <RelativeLayout 
+	            android:layout_gravity="center" 
+	            android:id="@+id/ib_light_power" 
+	            android:background="@color/transparent" 
+	            android:layout_width="60.0dip" 
+	            android:layout_height="60.0dip" >
+	
+	            <ImageView
+	                android:id="@+id/iv_light_color"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignLeft="@+id/imageView1"
+	                android:layout_centerVertical="true"
+	                android:src="@drawable/ic_bulbbottom" />
+	
+	            <ImageView
+	                android:id="@+id/imageView1"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignTop="@+id/iv_light_color"
+	                android:layout_centerHorizontal="true"
+	                android:src="@drawable/ic_gi_bulboff" />
+	      		      
+	        </RelativeLayout>
+	        <com.jinxin.widget.progressBar.UniversalColorView
+	            android:id="@+id/circle_color_view"
+	   			android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:background="@color/transparent"
+	        	android:layout_gravity="center" />
+	        <ImageView 
+	            android:id="@+id/color_light_on"
+	            android:layout_gravity="bottom|right|center" 
+	            android:background="@color/transparent" 
+	            android:layout_width="26.0dip" 
+	            android:layout_height="26.0dip" 
+	            android:layout_marginRight="50.0dip" 
+	            android:layout_marginBottom="5.0dip" 
+	            android:src="@drawable/ic_brightness_max" />
+	        <ImageView 
+	            android:id="@+id/color_light_off"
+	            android:layout_gravity="bottom|left|center" 
+	            android:background="@color/transparent" 
+	            android:layout_width="26.0dip" 
+	            android:layout_height="26.0dip" 
+	            android:layout_marginLeft="50.0dip" 
+	            android:layout_marginBottom="5.0dip"
+	            android:src="@drawable/ic_brightness_min" />
+	    </FrameLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/main_panel"
+        android:padding="5dp" >
+
+        <com.jinxin.widget.progressBar.RectColorView
+            android:id="@+id/rect_color_view"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    </RelativeLayout>
+	<RelativeLayout 
+	    android:id="@+id/color_change_layout"
+	    android:visibility="gone"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:focusable="true"
+	    android:clickable="true" >
+	    <FrameLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingTop="30dp"
+	        android:paddingBottom="30dp"
+	        android:layout_centerHorizontal="true"
+	        android:layout_centerVertical="true" >
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/layout_bg"
+	            android:orientation="vertical" >
+				<LinearLayout 
+		            android:paddingLeft="20dp"
+		            android:paddingRight="20dp"
+		            android:layout_width="match_parent" 
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal" >
+				
+				<com.jinxin.jxsmarthome.ui.widget.wheelview.WheelView
+				    android:id="@+id/wheel_mode"
+				    android:layout_weight="1"
+				    android:layout_marginRight="5dp"
+            	    android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" />
+				<com.jinxin.jxsmarthome.ui.widget.wheelview.WheelView
+				    android:id="@+id/wheel_delay_time"
+		           	android:layout_weight="1"
+		           	android:layout_marginLeft="5dp"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" />
+				</LinearLayout>
+				<LinearLayout 
+		            android:paddingLeft="20dp"
+		            android:paddingRight="20dp"
+		            android:layout_width="match_parent" 
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal" >
+				    
+				   <TextView 
+				       android:layout_weight="1"
+				       android:layout_width="wrap_content"
+				       android:layout_height="wrap_content"
+				       android:padding="5dp"
+				       android:gravity="center_horizontal"
+				       android:textColor="@color/dark_gray"
+				       android:text="模式"/>
+				   <TextView 
+				       android:layout_weight="1"
+				       android:layout_width="wrap_content"
+				       android:layout_height="wrap_content"
+				       android:padding="5dp"
+				       android:gravity="center_horizontal"
+				       android:textColor="@color/dark_gray"
+				       android:text="延时"/>
+				    
+				</LinearLayout>
+				<Button 
+				    android:id="@+id/color_mode_change_btn"
+				    android:layout_width="wrap_content"
+				    android:layout_height="40dp"
+				    android:layout_gravity="center_horizontal"
+				    android:padding="5dp"
+				    android:background="@drawable/selector_button_save"
+				    android:textColor="@color/dark_gray"
+				    android:text="切换" />
+				
+	        </LinearLayout>
+	    </FrameLayout>
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:id="@+id/light_foot_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true">
+        <TextView 
+            android:id="@+id/color_select_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:clickable="true"
+            android:background="@drawable/bottom_hover"
+            android:text="颜色选择"/>
+        <TextView 
+            android:id="@+id/color_change_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:clickable="true"
+            android:background="@drawable/bottom_bg"
+            android:text="颜色变换"/>
+        
+    </LinearLayout>
+	
+</RelativeLayout>

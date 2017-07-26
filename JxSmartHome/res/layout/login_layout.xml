@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_login" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="12.0dp"
+        android:layout_marginRight="12.0dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="4.0dp"
+            android:gravity="center_vertical|left" >
+
+            <ImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_login_input"
+                android:padding="8dp"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/editText_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dip"
+                    android:padding="8dp"
+                    android:background="@color/transparent"
+                    android:drawableLeft="@drawable/ic_user_login"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:text=""
+                    android:hint="@string/account:"
+                    android:singleLine="true"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <View 
+                    android:id="@+id/v_line"
+			        android:layout_width="match_parent"
+			        android:layout_height="1px"
+			        android:layout_marginLeft="15dp"
+			        android:layout_marginRight="15dp"
+			        android:background="@color/lightgray"/>
+
+                <EditText
+                    android:id="@+id/editText_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="8dp"
+                    android:layout_margin="10dip"
+                    android:background="@color/transparent"
+                    android:drawableLeft="@drawable/ic_psw_login"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:text=""
+                    android:hint="@string/password:"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loginView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/button_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_but_state_pad"
+                    android:text="@string/login"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_large" />
+
+                <LinearLayout
+                    android:id="@+id/loadingView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_loading"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <ProgressBar
+                        style="@style/myProgressBarStyleLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:indeterminateDuration="1200" />
+
+                    <TextView
+                        android:id="@+id/textViewLoading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/text_size_small" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/forget_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@drawable/ic_forget_password"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:padding="3dp"
+                    android:text="@string/forget_password"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_mini"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_set_voice_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@drawable/ic_voice_login_btn"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/voice_lock_login"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_mini" />
+                <TextView
+                    android:id="@+id/tv_set_pwd_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@drawable/ic_voice_login_btn"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/password_login"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_mini"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:text="@string/action_more"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_mini" />
+				<!--  
+                <TextView
+                    android:id="@+id/switch_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:drawableLeft="@drawable/ic_switch_user"
+                    android:drawablePadding="3dp"
+                    android:gravity="right"
+                    android:padding="3dp"
+                    android:text="@string/switch_user"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_mini"
+                    android:visibility="gone" />
+                    -->
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:paddingBottom="20dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textViewMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/blue" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/copy_right1"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/copy_right2"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_btn_wapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent" >
+
+    <ImageButton
+        android:id="@+id/menu_btn_message"
+        style="@style/animate_btn_home_right"
+        android:contentDescription="@string/comments_is_null"
+        android:src="@drawable/message" />
+
+    <ImageButton
+        android:id="@+id/menu_btn_music"
+        style="@style/animate_btn_home_right"
+        android:contentDescription="@string/comments_is_null"
+        android:src="@drawable/music" />
+
+    <ImageButton
+        android:id="@+id/menu_btn_telecontrol_board"
+        style="@style/animate_btn_home_right"
+        android:contentDescription="@string/comments_is_null"
+        android:src="@drawable/telecontrol_board" />
+
+    <ImageButton
+        android:id="@+id/menu_btn_temperature"
+        style="@style/animate_btn_home_right"
+        android:contentDescription="@string/comments_is_null"
+        android:src="@drawable/temperature_hover" />
+
+    <ImageButton
+        android:id="@+id/menu_btn_voice"
+        style="@style/animate_btn_home_right"
+        android:contentDescription="@string/comments_is_null"
+        android:src="@drawable/voice" />
+
+    <ImageButton
+        android:id="@+id/btn_menu"
+        style="@style/animate_btn_home_right"
+        android:contentDescription="@string/comments_is_null"
+        android:src="@drawable/clop" />
+
+</RelativeLayout>

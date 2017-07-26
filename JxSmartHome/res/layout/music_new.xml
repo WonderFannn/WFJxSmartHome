@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:id="@+id/music_new_main_control_panel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:background="@color/light_sky_blue"
+        android:orientation="vertical">
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/music_new_other_control_panel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#60000000"
+        android:orientation="horizontal">
+        
+        <TextView 
+            android:id="@+id/music_new_tv_soundoff"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/music_mute"
+            android:padding="5dp"
+            android:textColor="@color/dark_sky_blue"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"/>		
+            
+        <TextView 
+            android:id="@+id/music_new_tv_soundon"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/music_unmute"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:textColor="@color/dark_sky_blue"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"/>	
+            
+        <TextView 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"/>	
+            
+        <TextView 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"/>	
+            
+        <TextView 
+            android:id="@+id/music_new_song_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="@string/music_song_list"
+            android:textColor="@color/dark_sky_blue"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+</LinearLayout>

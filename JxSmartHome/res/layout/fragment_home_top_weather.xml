@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/day_weather_background"
+    android:layout_height="150dp"
+    android:id="@+id/fl_weather_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+         >
+
+        <RelativeLayout
+            android:id="@+id/rl_user_center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tv_wendu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_weather"
+                android:layout_below="@+id/tv_weather"
+                android:text="29 ~ 24℃"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_size_large" />
+
+            <TextView
+                android:id="@+id/tv_location_city"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:text="归属地位置"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_size_small" />
+            <TextView
+                android:id="@+id/tv_city_name"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:text="成都市"
+                android:drawableLeft="@drawable/location"
+                android:drawablePadding="5dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_size_small" />
+            
+            
+            <TextView
+                android:id="@+id/tv_real_time_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:clickable="true"
+                android:text="26℃"
+                android:drawableLeft="@drawable/temperature"
+                android:drawablePadding="5dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/tv_wind"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/tv_wendu"
+                android:layout_alignParentBottom="true"
+                android:clickable="true"
+                android:drawableLeft="@drawable/wind"
+                android:drawablePadding="5dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:text="南风微风"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/tv_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_location_city"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_real_time_temperature"
+                android:text="小雨转中雨"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_size_15" />
+
+            <ImageView
+                android:id="@+id/iv_weather_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_wendu"
+                android:layout_toLeftOf="@+id/tv_weather"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@null"
+                android:src="@drawable/duoyun_weather" />
+
+        </RelativeLayout>
+
+ </LinearLayout>
+
+</FrameLayout>

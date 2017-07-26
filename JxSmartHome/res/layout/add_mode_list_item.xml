@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_list_view"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="left|center_vertical"
+    android:orientation="horizontal" >
+
+    <CheckBox
+        android:id="@+id/checkBox_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:padding="5dp"
+        android:button="@drawable/selector_check_on_off"
+        android:focusable="false" />
+
+    <TextView
+        android:id="@+id/textView_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_normal" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="right|center_vertical" >
+
+        <ImageButton
+            android:id="@+id/imageButton_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/default_img_desc"
+            android:background="@color/transparent"
+            android:focusable="false"
+            android:src="@drawable/ico_swithch_off" />
+    </LinearLayout>
+
+</LinearLayout>

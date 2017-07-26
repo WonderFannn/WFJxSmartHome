@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page">
+    
+    <ListView 
+        android:id="@+id/speaker_choose_list"
+        android:layout_above="@id/speaker_choose_positiveButton"
+        android:background="@drawable/bg_login_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:dividerHeight="1px"
+        android:divider="@color/btn_hover_color"
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        android:listSelector="#00000000">
+    </ListView>
+</RelativeLayout>

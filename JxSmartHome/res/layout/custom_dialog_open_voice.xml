@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/head_line_orange"/>
+    
+    <Button 
+        android:id="@+id/send_gesture_open"
+        style="@style/button_style"
+        android:text="@string/control_gesture_open" />
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="1dp"
+            android:background="@color/tab_item_hover" />
+    
+    <Button 
+        android:id="@+id/send_gesture_close"
+        style="@style/button_style"
+        android:text="@string/control_gesture_close" />
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="1dp"
+            android:background="@color/tab_item_hover" />
+    
+    <Button 
+        android:id="@+id/send_voice_open"
+        style="@style/button_style"
+        android:text="@string/control_voice_watch" />
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="1dp"
+            android:background="@color/tab_item_hover" />
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="1dp"
+            android:background="@color/tab_item_hover" />
+    
+    <Button 
+        android:id="@+id/send_voice_cancel"
+        style="@style/button_style"
+        android:layout_marginTop="1dp"
+        android:text="@string/control_voice_cancel" />
+</LinearLayout>

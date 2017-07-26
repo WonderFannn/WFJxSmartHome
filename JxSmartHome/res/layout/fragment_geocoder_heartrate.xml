@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     >
+     
+  <View 
+      android:background="@color/white"
+      android:layout_height="112.5dp"
+      android:layout_width="match_parent"/>
+  
+  <RelativeLayout 
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+      <TextView 
+        android:textColor="@color/feedback_item_title"
+        android:gravity="right"
+        android:text="2015-12-23 10：10：23"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_15"
+        android:layout_marginLeft="@dimen/dimen_10"/>
+	<RelativeLayout 
+	    android:id="@+id/fragment_geocoder_rl"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="@dimen/dimen_15"
+	    >
+	    <TextView 
+	        android:layout_marginTop="@dimen/dimen_137"
+	        
+	        android:id="@+id/fragment_geocoder_average"
+	        android:textColor="@color/feedback_item_title"
+	        android:text="平均"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+	  	<TextView 
+	  	    android:layout_alignBaseline="@id/fragment_geocoder_average"
+	  	    android:layout_toRightOf="@id/fragment_geocoder_average"
+	  	    android:id="@+id/fragment_geocoder_average_num"
+	        android:textSize="@dimen/dimen_75"
+	        android:layout_marginLeft="@dimen/dimen_24"
+	        android:textColor="@color/feedback_item_big_num"
+	        android:text="83"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+	</RelativeLayout>
+	
+	<RelativeLayout 
+	    android:id="@+id/fragment_geocoder_height_low"
+	    android:layout_below="@id/fragment_geocoder_rl"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="@dimen/dimen_15">
+	    <TextView 
+	        android:layout_marginTop="@dimen/dimen_35"
+	        
+	        android:id="@+id/fragment_geocoder_average_min_max"
+	        android:textColor="@color/feedback_item_title"
+	        android:text="最低/最高"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+	  	<TextView 
+	  	    android:layout_alignBaseline="@id/fragment_geocoder_average_min_max"
+	  	    android:layout_toRightOf="@id/fragment_geocoder_average_min_max"
+	  	    android:id="@+id/fragment_geocoder_average_min_max_num"
+	        android:textSize="@dimen/dimen_20"
+	        android:layout_marginLeft="@dimen/dimen_24"
+	        android:textColor="@color/feedback_item_big_num"
+	        android:text="74/83"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+	</RelativeLayout>
+	
+	<ImageView 
+	    android:id="@+id/fragment_geocoder_heartrate_imageview"
+	    android:layout_below="@id/fragment_geocoder_height_low"
+	    android:layout_marginTop="@dimen/dimen_40"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"/>
+  </RelativeLayout>
+    
+	
+</LinearLayout>

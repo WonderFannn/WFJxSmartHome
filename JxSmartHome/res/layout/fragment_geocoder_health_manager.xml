@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+       
+    <android.support.v4.view.ViewPager
+	    android:id="@+id/fragment_geocoder_viewpager"
+	   	android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    />
+    
+    <View 
+        android:alpha="0.85"
+        android:background="@color/white"
+        android:layout_height="112.5dp"
+        android:layout_width="match_parent"/>
+    
+    <LinearLayout
+      	android:paddingLeft="@dimen/dimen_15"
+      	android:paddingRight="@dimen/dimen_15"
+        android:paddingTop="78dp"
+        android:gravity="bottom"
+        android:id="@+id/li_geocoder_health_manager_item"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content">
+        <TextView 
+            android:background="@color/geocoder_bg"
+            android:id="@+id/fragment_geocoder_heart_rate_tv"
+            android:paddingLeft="24dp"
+     	    android:paddingRight="24dp"
+	         android:gravity="center"
+	         android:text="心率"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:textColor="@color/text_color"
+	         android:textSize="@dimen/text_size_mini_small"
+	         />
+     	<TextView 
+     	    android:id="@+id/fragment_geocoder_execise_tv"
+     	    android:paddingLeft="24dp"
+     	    android:paddingRight="24dp"
+	         android:gravity="center"
+	         android:text="运动"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:textColor="@color/text_color"
+	         android:textSize="@dimen/text_size_mini_small"/>
+     	<TextView 
+     	    android:id="@+id/fragment_geocoder_sleep_tv"
+     	    android:paddingLeft="24dp"
+     	    android:paddingRight="24dp"
+	         android:gravity="center"
+	         android:text="睡眠"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:textColor="@color/text_color"
+	         android:textSize="@dimen/text_size_mini_small"
+	         />
+     </LinearLayout>
+        
+     <View 
+         android:layout_below="@id/li_geocoder_health_manager_item"
+         android:id="@+id/view_geocoder_line"	
+         android:layout_width="match_parent"
+         android:layout_height="1dp"
+         android:background="#84ac3d"/>
+     
+    
+     
+	
+</RelativeLayout>

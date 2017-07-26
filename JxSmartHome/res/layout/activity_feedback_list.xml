@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/top_line" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:text="@string/feedback_his"
+            android:textSize="@dimen/text_size_normal" />
+        
+        <com.zhy.imageloader.BetterSpinner
+            android:id="@+id/spinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/feedback_type_default"
+            android:background="@drawable/bg_spinner"
+            android:layout_marginBottom="@dimen/activity_vertical_margin" 
+            android:hint="BetterSpinner"/>
+    </RelativeLayout>
+    
+    <ListView
+        android:id="@+id/feedbackLv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/bg"
+        android:dividerHeight="1px"
+        android:scrollbars="none" >
+
+    </ListView>
+
+</LinearLayout>

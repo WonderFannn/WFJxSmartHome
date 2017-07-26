@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/btn_hover_color" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" >
+
+        <ToggleButton
+            android:id="@+id/tg_switch_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/selector_toggle_button"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/tg_switch_btn"
+            android:text="全关/全开"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/my_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayout1" >
+
+        <ImageView
+            android:id="@+id/iv_wind_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/bg_aircondition_mode_close"
+            android:contentDescription="@string/default_img_desc" />
+
+        <ImageView
+            android:id="@+id/iv_wind_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/default_img_desc"
+            android:src="@drawable/bg_aircondition_no_wind" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_framelayout"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="制热/制冷开关控制"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_small" />
+
+        <com.jinxin.jxsmarthome.ui.widget.FlowRadioGroup
+            android:id="@+id/rg_switch_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/rb_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/selector_wind_check"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:checked="true"
+                    android:text="关"
+                    android:textColor="@color/text_color" />
+
+                <RadioButton
+                    android:id="@+id/rb_open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/selector_wind_check"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="开"
+                    android:textColor="@color/text_color" />
+            </RelativeLayout>
+        </com.jinxin.jxsmarthome.ui.widget.FlowRadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout1"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="风速控制"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_small" />
+
+        <com.jinxin.jxsmarthome.ui.widget.FlowRadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <RadioButton
+                    android:id="@+id/btn_wind_none"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/selector_wind_level"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:checked="true"
+                    android:text="关"
+                    android:textColor="@color/text_color" />
+
+                <RadioButton
+                    android:id="@+id/btn_wind_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/selector_wind_level"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="低"
+                    android:textColor="@color/text_color" />
+
+                <RadioButton
+                    android:id="@+id/btn_wind_mid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/selector_wind_level"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="中"
+                    android:textColor="@color/text_color" />
+
+                <RadioButton
+                    android:id="@+id/btn_wind_high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/selector_wind_level"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="高"
+                    android:textColor="@color/text_color" />
+            </LinearLayout>
+        </com.jinxin.jxsmarthome.ui.widget.FlowRadioGroup>
+    </LinearLayout>
+
+</RelativeLayout>

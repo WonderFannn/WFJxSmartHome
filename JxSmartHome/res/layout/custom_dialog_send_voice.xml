@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/head_line_orange"/>
+
+    <EditText
+        android:id="@+id/send_voice_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/selecter_text_input"
+        android:hint="@string/control_voice_hint"
+        android:padding="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/send_voice_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:textColor="@color/text"
+            android:background="@drawable/selector_button_save"
+            android:text="@string/control_voice_send" />
+
+        <Button
+            android:id="@+id/send_voice_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:textColor="@color/text"
+            android:background="@drawable/selector_button_save"
+            android:text="@string/control_voice_cancel" />
+    </LinearLayout>
+
+</LinearLayout>

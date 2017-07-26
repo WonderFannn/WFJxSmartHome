@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:id="@+id/item_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/item_thumb"
+            android:layout_width="68dp"
+	        android:layout_height="68dp"
+	        android:padding="8dp"
+		    android:src="@drawable/selector_btn_control"
+	        android:contentDescription="@string/default_img_desc"/>
+
+        <LinearLayout
+            android:id="@+id/item_center"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center_vertical"
+		    android:padding="2dp"
+		    android:orientation="vertical">
+        	<TextView
+	            android:id="@+id/item_name"
+	            android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/dark_gray"
+		        android:singleLine="true"
+		        android:layout_gravity="center_horizontal"
+		        android:textSize="@dimen/text_size_small"
+		        android:text="@string/test_string"/>
+		    <TextView 
+		        android:id="@+id/item_desc"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/text_normal"
+		        android:textSize="@dimen/text_size_mini"
+		        android:singleLine="true"
+		        android:visibility="gone"
+		        android:text="@string/comments_is_null"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

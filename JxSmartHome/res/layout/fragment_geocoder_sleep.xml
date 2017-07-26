@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout 
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View 
+            android:background="@color/white"
+            android:layout_height="112.5dp"
+            android:layout_width="match_parent"/>
+        <RelativeLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:orientation="vertical" >
+		    <TextView 
+		        
+		        android:textColor="@color/feedback_item_title"
+		        android:gravity="right"
+		        android:text="2015-12-23 10：10：23"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="@dimen/dimen_15"
+		        android:layout_marginLeft="@dimen/dimen_10"/>
+		    
+		    <com.github.mikephil.charting.charts.PieChart
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginTop="@dimen/dimen_74"
+				android:id="@+id/fragment_geocoder_sleep_piechart"
+				android:layout_width="@dimen/dimen_190"
+				android:layout_height="@dimen/dimen_190" 
+				android:layout_gravity="center_horizontal"/>
+		    
+		     <LinearLayout 
+		        android:layout_marginTop="@dimen/dimen_74"
+		        android:layout_centerHorizontal="true"
+		        android:layout_width="@dimen/dimen_220"
+				android:layout_height="@dimen/dimen_220"
+				android:orientation="vertical"
+				android:gravity="center">
+		        <TextView 
+		            android:textColor="@color/feedback_item_title"
+		            android:textSize="@dimen/text_10"
+		            android:layout_height="wrap_content"
+		            android:layout_width="wrap_content"
+		            android:text="深度睡眠占比"/>
+		        <TextView 
+		            android:textColor="@color/feedback_item_big_num"
+		            android:textSize="@dimen/text_20"
+		            android:layout_height="wrap_content"
+		            android:layout_width="wrap_content"
+		            android:text="71.4%"/>
+		    </LinearLayout>
+		    
+		      
+		    
+		    <LinearLayout 
+		        android:id="@+id/fragment_geocoder_sleep_ln"
+		        android:layout_marginTop="@dimen/dimen_40"
+		        android:layout_marginLeft="@dimen/dimen_55"
+		        android:layout_marginRight="@dimen/dimen_55"
+		        android:layout_below="@id/fragment_geocoder_sleep_piechart"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:orientation="horizontal">
+		        <LinearLayout 
+		            android:gravity="center_horizontal"
+		            android:layout_width="0dp"
+		            android:layout_weight="1"
+		            android:orientation="vertical"
+		            android:layout_height="fill_parent">
+		            <TextView 
+		                android:textColor="@color/feedback_item_title"
+		                android:textSize="@dimen/text_10"
+		                android:layout_height="wrap_content"
+		                android:layout_width="wrap_content"
+		                android:text="深睡眠时长(min)"/>
+		            <TextView 
+		                android:layout_marginTop="@dimen/dimen_15"
+		                android:textColor="@color/feedback_item_big_num"
+		                android:textSize="@dimen/text_26"
+		                android:layout_height="wrap_content"
+		                android:layout_width="wrap_content"
+		                android:text="285"/>
+		        </LinearLayout>
+		        
+		        <LinearLayout 
+		            android:gravity="center_horizontal"
+		            android:layout_width="0dp"
+		            android:layout_weight="1"
+		            android:orientation="vertical"
+		            android:layout_height="fill_parent">
+		            <TextView 
+		                android:textColor="@color/feedback_item_title"
+		                android:textSize="@dimen/text_10"
+		                android:layout_height="wrap_content"
+		                android:layout_width="wrap_content"
+		                android:text="睡眠总时长（min）"/>
+		            <TextView 
+		                android:layout_marginTop="@dimen/dimen_15"
+		                android:textColor="@color/feedback_item_big_num"
+		                android:textSize="@dimen/text_26"
+		                android:layout_height="wrap_content"
+		                android:layout_width="wrap_content"
+		                android:text="399"/>
+		        </LinearLayout>
+		    </LinearLayout>
+		    
+		    <TextView 
+		        android:layout_below="@id/fragment_geocoder_sleep_ln"
+		        android:id="@+id/fragment_geocoder_sleep_title"
+		        android:layout_marginLeft="15dp"
+		        android:textColor="@color/feedback_item_title"
+		        android:textSize="@dimen/text_14"
+		        android:text="睡眠时长比例趋势图"
+		        android:layout_height="wrap_content"
+		        android:layout_width="wrap_content"/>
+		     <TextView 
+		        android:id="@+id/fragment_geocoder_sleep_title_danwei"
+		        android:layout_below="@id/fragment_geocoder_sleep_title"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginTop="@dimen/dimen_10"
+		        android:textColor="@color/feedback_item_title"
+		        android:textSize="@dimen/text_10"
+		        android:text="（单位：%）"
+		        android:layout_height="wrap_content"
+		        android:layout_width="wrap_content"/>
+		     
+		     <ImageView 
+		        android:id="@+id/fragment_geocoder_linechart_image"
+		        android:layout_marginTop="@dimen/dimen_36"
+		        android:layout_below="@id/fragment_geocoder_sleep_title_danwei"
+		        android:background="@drawable/fragment_geocoder_linechart_bg"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" />
+		     
+		     <com.github.mikephil.charting.charts.LineChart
+		        android:layout_marginTop="@dimen/dimen_36"
+		        android:layout_below="@id/fragment_geocoder_sleep_title_danwei"
+		        android:id="@+id/fragment_geocoder_linechart"
+		        android:layout_width="match_parent"
+		        android:layout_height="290dp" />
+		     
+		      <TextView
+		        android:id="@+id/fragment_geocoder_linechar_write"
+		        android:layout_below="@id/fragment_geocoder_linechart_image"
+		        android:layout_marginRight="15dp" 
+		        android:layout_marginTop="15dp" 
+		        android:gravity="right"
+		        android:textColor="@color/feedback_item_title"
+		        android:textSize="@dimen/text_10"
+		        android:text="该数据为最近五次记录"
+		        android:layout_height="wrap_content"
+		        android:layout_width="match_parent"/>
+		      <View 
+		          android:layout_below="@id/fragment_geocoder_linechar_write"
+		          android:layout_alignParentBottom="true"
+		          android:layout_width="fill_parent"
+		          android:layout_height="45dp"/>
+		</RelativeLayout>
+    </LinearLayout>
+    
+    
+</ScrollView>

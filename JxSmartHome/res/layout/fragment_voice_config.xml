@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/btn_hover_color" >
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/top_line"/>
+    <com.jinxin.widget.PullToRefresh.PullToRefreshListView
+        android:id="@+id/voice_config_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_above="@+id/voice_bottom_layout"
+        android:scrollbars="none" />
+        
+	<LinearLayout 
+	    android:id="@+id/voice_bottom_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:visibility="gone"
+	    android:background="@color/white" >
+	    <RelativeLayout
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:layout_marginLeft="10dp"
+	        android:padding="5dp" >
+	        <TextView 
+	            android:id="@+id/timer_voice_title"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:padding="2dp"
+	            android:textColor="@color/text_color"
+	            android:textSize="@dimen/text_size_medium"
+	            android:text="@string/voice_news_timer_title"/>
+	        <TextView 
+	            android:id="@+id/timer_voice_time"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:padding="2dp"
+	            android:layout_below="@id/timer_voice_title"
+	            android:textColor="@color/text_color_light"
+	            android:text="@string/voice_news_timer_null"
+	            android:textSize="@dimen/text_size_small"/>
+	        <TextView 
+	            android:id="@+id/timer_voice_priod"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:padding="2dp"
+	            android:layout_marginLeft="10dp"
+	            android:layout_below="@id/timer_voice_title"
+	            android:layout_toRightOf="@id/timer_voice_time"
+	            android:textColor="@color/text_color_light"
+	            android:textSize="@dimen/text_size_small"/>
+	    </RelativeLayout>
+	    <CheckBox
+                android:id="@+id/voice_check_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+        		android:focusableInTouchMode="false" 
+                android:layout_gravity="center_vertical"
+                android:button="@drawable/selector_voice_toggle_btn"
+                android:focusable="false" />
+	</LinearLayout>
+	<Button 
+	    android:id="@+id/voice_play_btn"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:text="@string/music_play"
+	    android:textColor="@color/text_color"
+	    android:visibility="gone"
+	    android:background="@drawable/bootom_voice_bg" />
+</RelativeLayout>

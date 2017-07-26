@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/sub_account_item_style"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp" >
+
+    <ImageView
+        android:id="@+id/ItemImageStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/default_img_desc"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true" >
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="4dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/ItemImageStatus"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textViewCustomerId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:layout_weight="1" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/textViewCustomerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/text_normal" >
+        </TextView>
+    </LinearLayout>
+
+</RelativeLayout>

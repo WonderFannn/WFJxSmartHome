@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/icon_error"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/default_img_desc"/>
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/tab_item_hover"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="未找到可用模板"
+        android:textSize="@dimen/text_size_small"/>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/tab_item_hover"/>
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_green"
+        android:textSize="@dimen/text_size_small"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/remote_board_is_null"/>
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_green"
+        android:textSize="@dimen/text_size_small"
+        android:layout_margin="20dp"
+        android:text="@string/remote_board_auto_operation" />
+    
+    <Button 
+        android:id="@+id/btn_learn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_button_save"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="智能学习"
+        android:textColor="@color/white"/>
+    
+
+</LinearLayout>

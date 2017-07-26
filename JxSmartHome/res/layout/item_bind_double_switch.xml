@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp" >
+
+        <CheckBox
+            android:id="@+id/item_cb_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:button="@drawable/selector_multiple_button" />
+
+        <TextView
+            android:id="@+id/item_fun_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/item_cb_btn"
+            android:textColor="@color/text_color_light"
+            android:textSize="@dimen/text_size_small" />
+        
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:drawableLeft="@drawable/ico_item_time_img"
+            android:drawablePadding="5dp"
+            android:padding="5dp"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_small"
+            android:text="0s" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="12dp"
+            android:background="@color/btn_hover_color" />
+
+        <TextView
+            android:id="@+id/item_select_socket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@drawable/ico_item_socket"
+            android:drawablePadding="5dp"
+            android:padding="5dp"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_small"
+            android:text="关闭" />
+    </LinearLayout>
+
+</LinearLayout>

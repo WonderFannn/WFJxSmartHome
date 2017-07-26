@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:background="@drawable/title_bg"
+        android:layout_height="wrap_content">
+        
+        <ImageView 
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/default_img_desc"
+            android:src="@drawable/title_logo"/>
+        
+        <TextView 
+            android:id="@+id/home_ib_lights"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_alignParentRight="true"
+            android:text="@string/home_common_info_lights"
+            android:drawableTop="@drawable/icon_dengguang_hover"/>
+        
+        <TextView 
+            android:id="@+id/home_ib_door"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_toLeftOf="@id/home_ib_lights"
+            android:text="@string/home_common_info_door"
+            android:drawableTop="@drawable/icon_menjing_hover"/>
+        
+        <TextView 
+            android:id="@+id/home_ib_security"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_toLeftOf="@id/home_ib_door"
+            android:text="@string/home_common_info_security"
+            android:drawableTop="@drawable/icon_anfang_hover"/>
+        
+       <TextView 
+            android:id="@+id/home_ib_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_toLeftOf="@id/home_ib_security"
+            android:text="@string/home_common_info_camera"
+            android:drawableTop="@drawable/icon_jiankong_hover"/>
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <com.jinxin.jxsmarthome.ui.widget.vfad.ViewflipperAD
+            android:id="@+id/viewflipperAD1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </com.jinxin.jxsmarthome.ui.widget.vfad.ViewflipperAD>
+        
+    </LinearLayout>
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@color/transparent"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/footView"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:background="@color/blue"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+    </HorizontalScrollView>
+	
+</LinearLayout>
+
+<com.jinxin.jxsmarthome.ui.widget.ExtendAnimatePathMenu
+    android:id="@+id/home_path_menu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+</FrameLayout>

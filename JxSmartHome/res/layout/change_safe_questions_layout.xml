@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_normal" >
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/top_line"/>
+	<ScrollView 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:scrollbars="none" >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:padding="5dp"
+	        android:orientation="vertical">
+	        <TextView 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="25dp"
+       		    android:layout_marginTop="10dp"
+       		    android:textStyle="bold"
+	            android:textColor="@color/text"
+	            android:textSize="@dimen/text_size_medium"
+	            android:text="@string/set_safe_question_title" />
+	    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true"
+        android:padding="20dp" >
+		<LinearLayout 
+		    android:id="@+id/linearLayout1"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="5dp"
+		    android:orientation="vertical">
+		    <Button
+            android:id="@+id/question1_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/drop_down_state"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="15dp"
+            android:textColor="@color/text_color"
+            android:text="@string/question_not_null"
+            android:textSize="@dimen/text_size_medium"/>
+            
+
+        <EditText
+            android:id="@+id/et_safe_question1"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/selecter_text_input"
+            android:singleLine="true"
+            android:textColor="@color/text_color"
+            android:hint="@string/question_answer_not_null" />
+		    
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="20dp"
+		    android:orientation="vertical" >
+
+		    <Button
+            android:id="@+id/question2_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/drop_down_state"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="15dp"
+            android:textColor="@color/text_color"
+            android:text="@string/question_not_null"
+            android:textSize="@dimen/text_size_medium"/>
+            
+
+        <EditText
+            android:id="@+id/et_safe_question2"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/text_color"
+            android:background="@drawable/selecter_text_input"
+            android:singleLine="true"
+            android:hint="@string/question_answer_not_null" />
+		    
+		</LinearLayout>
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="20dp"
+		    android:orientation="vertical" >
+		<Button
+            android:id="@+id/btn_change_sure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/selector_button_save"
+            android:text="@string/button_ok"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_medium" />
+		</LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+	</ScrollView>
+</RelativeLayout>

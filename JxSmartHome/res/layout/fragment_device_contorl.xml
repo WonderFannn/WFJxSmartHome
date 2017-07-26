@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/fragment_device_control"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <ListView
+            android:id="@+id/deveic_control_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:cacheColorHint="@null"
+            android:divider="@null"
+            android:padding="5dp" />
+        
+    </FrameLayout>
+	<LinearLayout
+		    android:id="@+id/lights_control"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_gravity="bottom"
+	        android:padding="5dp"
+	        android:visibility="gone" >
+
+		<Button
+		    android:id="@+id/lights_btn"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="8dp"
+		    android:layout_marginRight="8dp"
+		    android:background="@drawable/selector_button_save"
+		    android:textColor="@color/text_color"
+		    android:text="批量控制彩灯" />
+    	
+    </LinearLayout>
+</LinearLayout>

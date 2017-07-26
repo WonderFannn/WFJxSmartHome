@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/top_line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <!-- android:background="@drawable/selector_layout_safe_item" -->
+
+
+                <!-- 修改密码 -->
+
+                <LinearLayout
+                    android:id="@+id/change_password_layout"
+                    style="@style/my_account_item_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tile_item_first_bg_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/fdResult"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/change_secretkey"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/default_img_desc"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_enter_secondary" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/btn_hover_color" />
+
+                <!-- 昵称 -->
+
+                <LinearLayout
+                    android:id="@+id/change_nickeyname_layout"
+                    style="@style/my_account_item_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tile_item_middle_bg_selector"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/fdTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/change_nickyname"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <TextView
+                        android:id="@+id/textViewNickeyName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:padding="4dp"
+                        android:textColor="@color/text_color_light"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/default_img_desc"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_enter_secondary" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/btn_hover_color" />
+
+                <!-- 密保 -->
+
+                <LinearLayout
+                    android:id="@+id/change_safe_question_layout"
+                    style="@style/my_account_item_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tile_item_last_bg_selector"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/tvReplyTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/safe_question_change"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/default_img_desc"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_enter_secondary" />
+                </LinearLayout>
+                
+                <!-- 声纹锁 -->
+                <View 
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/btn_hover_color"/>
+            <RelativeLayout
+                android:id="@+id/voice_login_layout"
+                style="@style/my_account_item_style"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/tile_item_last_bg_selector">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/voice_lock"
+                    android:textColor="@color/dark_gray"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@android:string/no"
+                    android:gravity="center_vertical"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_enter_secondary" />
+            </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <!-- android:background="@drawable/selector_layout_safe_item" -->
+
+
+                <!-- 启用九宫格 -->
+
+                <LinearLayout
+                    android:id="@+id/password_nine_layout"
+                    style="@style/my_account_item_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tile_item_first_bg_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/textViewPasswordNine"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/password_nine_switch"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical" >
+
+                        <ImageButton
+                            android:id="@+id/imageViewPasswordNine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@color/transparent"
+                            android:contentDescription="@string/default_img_desc"
+                            android:focusable="false"
+                            android:padding="4dp"
+                            android:src="@drawable/selector_mode_toggle_button" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/btn_hover_color" />
+
+                <!-- 启用静脉纹 -->
+
+                <LinearLayout
+                    android:id="@+id/veinLayout"
+                    style="@style/my_account_item_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/tile_item_last_bg_selector"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/textViewPasswordVein"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/password_vein_switch"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical" >
+
+                        <ImageButton
+                            android:id="@+id/imageViewPasswordVein"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@color/transparent"
+                            android:contentDescription="@string/default_img_desc"
+                            android:focusable="false"
+                            android:padding="4dp"
+                            android:src="@drawable/selector_mode_toggle_button" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 只进行静脉纹登录 -->
+                <View
+                    android:id="@+id/vein_only_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:visibility="gone"
+                    android:background="@color/btn_hover_color" />
+
+                <LinearLayout
+                    android:id="@+id/veinOnlyLayout"
+                    style="@style/my_account_item_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/tile_item_last_bg_selector"
+                    android:gravity="center_vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/textViewVeinOnly"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/setting_vein_only"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical" >
+
+                        <ImageButton
+                            android:id="@+id/imageViewVeinOnly"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@color/transparent"
+                            android:contentDescription="@string/default_img_desc"
+                            android:focusable="false"
+                            android:padding="4dp"
+                            android:src="@drawable/ico_swithch_off" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

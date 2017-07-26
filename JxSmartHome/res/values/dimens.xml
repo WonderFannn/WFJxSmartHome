@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_mcio">10.0sp</dimen>
+    <dimen name="text_size_mini">12.0sp</dimen>
+    <dimen name="text_size_mini_small">13.0sp</dimen>
+    <dimen name="text_size_small">14.0sp</dimen>
+    <dimen name="text_size_15">15.0sp</dimen>
+    <dimen name="text_size_16">16.0sp</dimen>
+    <dimen name="text_size_medium">18.0sp</dimen>
+    <dimen name="text_size_large">20.0sp</dimen>
+    <dimen name="text_size_xlarge">24.0sp</dimen>
+    <dimen name="text_size_xxlarge">28.0sp</dimen>
+    
+    <!-- fro pop menu -->
+    <dimen name="popmenu_width">120.0dip</dimen>
+    <dimen name="popmenu_yoff">-200.0dip</dimen>
+    <dimen name="dip2pix">1.0dip</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <!-- music player -->
+    <dimen name="audio_player_info_container_padding">16dp</dimen>
+    <dimen name="audio_player_artwork_padding">20dp</dimen>
+    <dimen name="audio_player_controls_height">56dp</dimen>
+    <dimen name="audio_player_seek_bar_padding">10dp</dimen>
+    <dimen name="audio_player_button_container_padding">2dp</dimen>
+    
+    <dimen name="tab_height">40.0dip</dimen>
+    <dimen name="tab_padding_top_bottom">6.0dip</dimen>
+    <dimen name="tab_padding_left_right">40.0dip</dimen>
+    <dimen name="text_size_micro">11.0sp</dimen>
+    
+    <dimen name="tile_item_up_padding_top">8.0dp</dimen>
+    <dimen name="text_size_normal">16.0sp</dimen>
+    
+    <dimen name="standard_padding">8dip</dimen>
+  <dimen name="half_padding">4dip</dimen>
+  
+  <!-- PinnerHeaderListView -->
+  <dimen name="index_bar_view_text_size">12sp</dimen>
+    <dimen name="index_bar_view_width">20dp</dimen>
+    <dimen name="index_bar_view_margin">10dp</dimen>
+    
+    <dimen name="feedback_img_width">48dp</dimen>
+    <dimen name="feedback_img_height">48dp</dimen>
+    
+    <!-- Pluto Button -->
+    
+    <dimen name="dimen_1">1dp</dimen>
+    <dimen name="dimen_2">2dp</dimen>
+    <dimen name="dimen_4">4dp</dimen>
+    <dimen name="dimen_5">5dp</dimen>
+    <dimen name="dimen_8">8dp</dimen>
+    <dimen name="dimen_10">10dp</dimen>
+    <dimen name="dimen_12">12dp</dimen>
+    <dimen name="dimen_15">15dp</dimen>
+    <dimen name="dimen_14">14dp</dimen>
+    <dimen name="dimen_16">16dp</dimen>
+    <dimen name="dimen_24">24dp</dimen>
+    <dimen name="dimen_18">18dp</dimen>
+    <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_22">22dp</dimen>
+    <dimen name="dimen_25">25dp</dimen>
+    <dimen name="dimen_28">28dp</dimen>
+    <dimen name="dimen_30">30dp</dimen>
+    <dimen name="dimen_32">32dp</dimen>
+    <dimen name="dimen_34">34dp</dimen>
+    <dimen name="dimen_35">35dp</dimen>
+    <dimen name="dimen_36">36dp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
+    <dimen name="dimen_45">45dp</dimen>
+    <dimen name="dimen_50">50dp</dimen>
+    <dimen name="dimen_52">52dp</dimen>
+    <dimen name="dimen_55">55dp</dimen>
+    <dimen name="dimen_60">60dp</dimen>
+    <dimen name="dimen_61">61dp</dimen>
+    <dimen name="dimen_70">70dp</dimen>
+    <dimen name="dimen_74">74dp</dimen>
+    <dimen name="dimen_75">75dp</dimen>
+    <dimen name="dimen_80">80dp</dimen>
+     <dimen name="dimen_96">96dp</dimen>
+    <dimen name="dimen_100">100dp</dimen>
+    <dimen name="dimen_120">120dp</dimen>
+    <dimen name="dimen_140">140dp</dimen>
+    <dimen name="dimen_150">150dp</dimen>
+    <dimen name="dimen_160">160dp</dimen>
+    <dimen name="dimen_180">180dp</dimen>
+    <dimen name="dimen_137">137dp</dimen>
+    <dimen name="dimen_184">184dp</dimen>
+    <dimen name="dimen_190">190dp</dimen>
+    <dimen name="dimen_200">200dp</dimen>
+    <dimen name="dimen_220">220dp</dimen>
+    <dimen name="dimen_240">240dp</dimen>
+    <dimen name="dimen_280">280dp</dimen>
+    <dimen name="text_10">10sp</dimen>
+    <dimen name="text_12">12sp</dimen>
+    <dimen name="text_14">14sp</dimen>
+    <dimen name="text_16">16sp</dimen>
+    <dimen name="text_18">18sp</dimen>
+    <dimen name="text_20">20sp</dimen>
+    <dimen name="text_22">22sp</dimen>
+    <dimen name="text_24">24sp</dimen>
+    <dimen name="text_26">26sp</dimen>
+    <dimen name="text_28">28sp</dimen>
+    <dimen name="text_32">32sp</dimen>
+    <dimen name="text_36">36sp</dimen>
+    <dimen name="text_40">40sp</dimen>
+    <!-- slidingmenu -->
+    <dimen name="slidingmenu_offset">160dp</dimen>
+    <dimen name="shadow_width">2dp</dimen>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@id/timer_center"
+        android:layout_width="match_parent"
+        android:layout_height="32dip" >
+
+        <Button
+            android:id="@id/single_detect"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_button_save"
+            android:singleLine="true"
+            android:text="@string/send_instruct"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@id/device_alias"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/single_detect"
+            android:gravity="center_vertical"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dip" >
+
+        <TextView
+            android:id="@id/device_state"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@id/device_whId"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/device_state"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+
+</LinearLayout>

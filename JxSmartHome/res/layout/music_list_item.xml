@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_music_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@color/transparent" >
+    
+    <TextView 
+        android:id="@+id/musiclist_item_no"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+		android:layout_alignParentLeft="true"  
+		android:padding="10dp"
+		android:gravity="center_vertical"      
+        android:text="@string/test_number"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/white"/>
+    
+        
+    <TextView 
+       	android:id="@+id/musiclist_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/musiclist_item_no"
+        android:layout_centerVertical="true"
+		android:padding="5dp"
+		android:singleLine="true"
+		android:ellipsize="marquee"
+		android:text="@string/test_string"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/white"/>
+        
+    
+    <Button 
+        android:id="@+id/musiclist_item_more"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:padding="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        android:drawableRight="@drawable/ticn_rbarr_dis"/>
+    
+    <ViewStub 
+        android:id="@+id/music_list_item_vs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/musiclist_item_more"
+        android:layout="@layout/music_list_item_menu"/>
+
+</RelativeLayout>

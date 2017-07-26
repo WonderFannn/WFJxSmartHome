@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/voice_lock_fragmentlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" > 
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/default_img_desc"
+                android:src="@drawable/icon_voice" />
+
+            <TextView
+                android:id="@+id/voice_lock_tips_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:padding="2dp"
+                android:textSize="@dimen/text_size_medium"
+                android:text="@string/voice_lock_close"
+                android:textColor="@color/text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/veinLayout"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/textViewPasswordVein"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/voice_lock_login"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="right|center_vertical" >
+
+                    <ImageButton
+                        android:id="@+id/switch_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/transparent"
+                        android:contentDescription="@string/default_img_desc"
+                        android:focusable="false"
+                        android:src="@drawable/ico_swithch_off" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 隐藏提示 -->
+
+            <TextView
+                android:id="@+id/hint_tips_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="@string/open_voice_lock_tips"
+                android:textColor="@color/text_color_light"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_login"
+                android:contentDescription="@string/default_img_desc" />
+            <!-- 设置声纹密码 -->
+
+            <TextView
+                android:id="@+id/reset_voice_lock_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_next"
+                android:padding="10dp"
+                android:text="@string/reset_voice_lock_pwd"
+                android:textSize="@dimen/text_size_medium" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_login"
+                android:contentDescription="@string/default_img_desc" />
+
+            <TextView
+                android:id="@+id/confirm_voice_lock_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_next"
+                android:padding="10dp"
+                android:text="@string/confirm_voice_lock_pwd"
+                android:textSize="@dimen/text_size_medium" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_login"
+                android:contentDescription="@string/default_img_desc" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/showPwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_medium" />
+
+            <TextView
+                android:id="@+id/showMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_medium" />
+
+            <TextView
+                android:id="@+id/showRegFbk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_medium" />
+        </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

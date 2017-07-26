@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_page"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/home_state"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/home_state_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/home_running_device_title" />
+
+            <ImageView
+                android:id="@+id/home_ib_lights"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/home_state_title"
+                android:contentDescription="@android:string/no"
+                android:scaleType="centerInside"
+                android:layout_marginLeft="20dp"
+                android:padding="2dp"
+                android:src="@drawable/icon_dengguang_hover" />
+
+            <ImageView
+                android:id="@+id/home_ib_door"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="2dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/home_ib_lights"
+                android:contentDescription="@android:string/no"
+                android:layout_marginLeft="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_menjing_hover" />
+
+            <ImageView
+                android:id="@+id/home_ib_security"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="2dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/home_ib_door"
+                android:contentDescription="@android:string/no"
+                android:layout_marginLeft="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_anfang_hover" />
+            
+            <ImageView
+                android:id="@+id/home_ib_socket"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="2dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/home_ib_security"
+                android:contentDescription="@android:string/no"
+                android:layout_marginLeft="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_chazuo1" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@android:string/no"
+            android:src="@drawable/top_line" />
+
+       <!--  <com.jinxin.jxsmarthome.ui.widget.vfad.ViewflipperAD
+            android:id="@+id/home_viewflipperAD1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6" >
+        </com.jinxin.jxsmarthome.ui.widget.vfad.ViewflipperAD> -->
+         
+         <include layout="@layout/fragment_home_top_weather" />
+         
+        <!-- common device -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="0dp"
+            android:paddingTop="2dp"
+            android:text="@string/home_category_common_device" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7" >
+
+            <TextView
+                android:id="@+id/home_common_device_null"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:text="@string/home_common_device_null" />
+
+            <GridView
+                android:id="@+id/home_common_device_grid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/content_bg_color"
+                android:fadingEdge="none"
+                android:gravity="center"
+                android:horizontalSpacing="1dp"
+                android:numColumns="2"
+                android:scrollbars="none"
+                android:verticalSpacing="1dp" >
+            </GridView>
+        </FrameLayout>
+
+        <!-- common pattern -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="0dp"
+            android:paddingTop="2dp"
+            android:text="@string/home_category_common_pattern" />
+
+        <GridView
+            android:id="@+id/home_common_pattern_grid"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:background="@color/content_bg_color"
+            android:gravity="center"
+            android:horizontalSpacing="1dp"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:verticalSpacing="1dp" >
+        </GridView>
+    </LinearLayout>
+
+    <com.jinxin.jxsmarthome.ui.widget.ExtendAnimatePathMenu
+        android:id="@+id/home_path_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>

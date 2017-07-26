@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:alpha="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/ico_set_button"
+        alpha:showAsAction="always"
+        android:title="@string/action_more">
+        <menu>
+            <item
+                android:id="@+id/action_music_input"
+                android:icon="@drawable/ico_input"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/music_choose_input"/>
+            <item
+                android:id="@+id/action_music_speaker"
+                android:icon="@drawable/ico_speaker"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/music_chose_speaker"/>
+            <item
+                android:id="@+id/action_music_amplifier"
+                android:icon="@drawable/ico_player"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/music_choose_amplifier"/>
+            <item
+                android:id="@+id/action_music_list"
+                android:icon="@drawable/ico_pop_device_scan"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/music_song_list"/>
+            <item
+                android:id="@+id/action_music_state"
+                android:icon="@drawable/ico_pop_device_scan"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/music_state"/>
+            <item
+                android:id="@+id/action_cloud_music_list"
+                android:icon="@drawable/ico_local_music"
+                alpha:showAsAction="ifRoom"
+                android:title="@string/cloud_music_song_list"/>
+        </menu>
+    </item>
+
+</menu>

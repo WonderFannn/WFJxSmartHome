@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center" >
+    
+    <ImageView 
+        android:id="@+id/hot_singer_item_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:padding="1dp"
+        android:contentDescription="@string/default_img_desc"
+        android:src="@drawable/ic_user" />
+    <TextView 
+        android:id="@+id/hot_singer_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="2dp"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/text_color" />
+
+</LinearLayout>

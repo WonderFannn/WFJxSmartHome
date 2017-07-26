@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@color/transparent"
+    android:orientation="vertical" >
+    
+    <Button 
+        android:id="@+id/custom_controller_item_number"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:focusable="true"
+        android:clickable="false"
+        android:background="@drawable/selector_btn_control"
+        android:contentDescription="@string/test_string"/>
+
+</LinearLayout>

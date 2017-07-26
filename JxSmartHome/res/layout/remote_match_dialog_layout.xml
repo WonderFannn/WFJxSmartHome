@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_black"
+    android:orientation="vertical" >
+    <RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/bg_add_account_dialog"
+	    android:layout_centerInParent="true"
+	    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="智能对码"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_medium" />
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightgray"
+        android:layout_below="@id/tv_title"
+        android:contentDescription="@string/default_img_desc"/>
+    
+   	<ImageView 
+   	    android:id="@+id/iv_phone"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:src="@drawable/icon_phone"
+   	    android:layout_centerHorizontal="true"
+   	    android:layout_below="@id/tv_title"
+   	    android:layout_marginTop="32dp"
+   	    android:layout_marginBottom="16dp"
+   	    android:contentDescription="@string/default_img_desc"/>
+   	<ImageView
+   	    android:id="@+id/iv_search" 
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:src="@drawable/icon_search_code"
+   	    android:layout_centerHorizontal="true"
+   	    android:layout_centerInParent="true"
+   	    android:layout_below="@id/tv_title"
+   	    android:layout_toRightOf="@id/iv_phone"
+   	    android:layout_marginTop="42dp"
+   	    android:layout_marginLeft="-24dp"
+   	    android:contentDescription="@string/default_img_desc"/>
+   	<TextView 
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_centerHorizontal="true"
+   	    android:layout_below="@id/iv_phone"
+   	    android:text="智能对码中..."
+   	    android:textColor="@color/text_color"
+   	    android:padding="16dp"
+   	    android:textSize="@dimen/text_size_small"/>
+    </RelativeLayout>
+	
+</RelativeLayout>

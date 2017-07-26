@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <ListView 
+        android:id="@+id/musiclist_lv_songs_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:fadingEdge="none"
+        android:padding="5dp"
+        android:scrollbars="none"
+        android:focusableInTouchMode="true"
+        android:cacheColorHint="#00000000" >
+    </ListView>
+    
+</RelativeLayout>

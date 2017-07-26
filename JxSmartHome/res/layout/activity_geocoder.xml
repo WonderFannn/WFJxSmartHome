@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <FrameLayout 
+        android:id="@+id/fragment_geocoder_replace"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    
+     <LinearLayout 
+         android:gravity="center_horizontal"
+         android:orientation="horizontal"
+         android:layout_marginTop="15dp"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+         <TextView 
+	          android:gravity="center"
+	          android:id="@+id/tv_geocoder_reale_time"
+	          android:background="@drawable/btn_geocoder_left_selector"
+	          android:text="实时查询"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:textColor="@color/text_color"
+	          android:textSize="@dimen/text_size_mini_small"/>
+         
+      	<TextView 
+	          android:gravity="center"
+	          android:id="@+id/tv_geocoder_health_manager"
+	          android:text="健康管理"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:textColor="@color/text_color"
+	          android:textSize="@dimen/text_size_mini_small"
+	          android:background="@drawable/btn_geocoder_right_selector"/>
+     </LinearLayout>
+    
+    
+</RelativeLayout>

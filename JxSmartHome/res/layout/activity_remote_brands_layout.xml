@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:focusable="true" 
+	android:focusableInTouchMode="true" 
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/search_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ico_remote_search"
+        android:hint="搜索"
+        android:padding="5dp"
+        android:layout_margin="12dp"
+        android:singleLine="true"
+        android:background="@drawable/bg_remote_search" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <include
+            layout="@layout/loading_empty_view"
+             />
+        
+         <com.jinxin.jxsmarthome.ui.widget.pinnerHeaderListView.PinnedHeaderListView
+            android:id="@+id/list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollingCache="false" />
+    </FrameLayout>
+
+</LinearLayout>
