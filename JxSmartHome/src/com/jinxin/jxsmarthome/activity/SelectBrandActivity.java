@@ -3,6 +3,8 @@ package com.jinxin.jxsmarthome.activity;
 import com.jinxin.infrared.model.InfraredCodeLibraryConstant;
 import com.jinxin.jxsmarthome.R;
 import com.jinxin.jxsmarthome.entity.CustomerProduct;
+import com.jinxin.jxsmarthome.entity.FunDetail;
+import com.jinxin.jxsmarthome.entity.ProductFun;
 
 import android.content.Intent;
 import android.content.res.Resources;
@@ -21,6 +23,9 @@ public class SelectBrandActivity extends BaseActionBarActivity implements OnItem
 	private int deviceType;
 	
 	private CustomerProduct  currUFO = null;
+	
+	private FunDetail funDetail;
+	private ProductFun productFun;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -35,7 +40,8 @@ public class SelectBrandActivity extends BaseActionBarActivity implements OnItem
 	private void initData() {
 		Intent intent = getIntent();
 		deviceType = intent.getIntExtra(InfraredCodeLibraryConstant.IntentTag.DEVICE_TYPE, 0);
-		currUFO = (CustomerProduct) intent.getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.UFO);
+		funDetail = (FunDetail) getIntent().getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.FUNDETIAL);
+		productFun = (ProductFun) getIntent().getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.PRODUCTFUN);
 		Resources res =getResources();
 		switch (deviceType) {
 		case InfraredCodeLibraryConstant.DeviceType.AirCleaner:
@@ -84,7 +90,8 @@ public class SelectBrandActivity extends BaseActionBarActivity implements OnItem
 		selectModelIntent.putExtra(InfraredCodeLibraryConstant.IntentTag.DEVICE_TYPE, deviceType);
 		//将括号内英文品牌名发到下个界面
 		selectModelIntent.putExtra(InfraredCodeLibraryConstant.IntentTag.BRAND, strs[position].substring(strs[position].indexOf("(")+1, strs[position].indexOf(")")));
-		selectModelIntent.putExtra(InfraredCodeLibraryConstant.IntentTag.UFO, currUFO);
+		selectModelIntent.putExtra(InfraredCodeLibraryConstant.IntentTag.FUNDETIAL, funDetail);
+		selectModelIntent.putExtra(InfraredCodeLibraryConstant.IntentTag.PRODUCTFUN, productFun);
 		startActivity(selectModelIntent);
 	}
 }

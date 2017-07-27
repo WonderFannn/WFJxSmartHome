@@ -3,6 +3,8 @@ package com.jinxin.jxsmarthome.activity;
 import com.jinxin.infrared.model.InfraredCodeLibraryConstant;
 import com.jinxin.jxsmarthome.R;
 import com.jinxin.jxsmarthome.entity.CustomerProduct;
+import com.jinxin.jxsmarthome.entity.FunDetail;
+import com.jinxin.jxsmarthome.entity.ProductFun;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,6 +26,9 @@ public class AddRemoteDeviceActivity extends BaseActionBarActivity implements On
 	private LinearLayout btnCamera;
 	
 	private CustomerProduct  currUFO = null;
+	
+	private FunDetail funDetail;
+	private ProductFun productFun;
 
 	/**
 	 * Find the Views in the layout<br />
@@ -63,8 +68,9 @@ public class AddRemoteDeviceActivity extends BaseActionBarActivity implements On
 	}
 
 	private void initData() {
-		currUFO = (CustomerProduct) getIntent().getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.UFO);
-		
+//		currUFO = (CustomerProduct) getIntent().getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.UFO);
+		funDetail = (FunDetail) getIntent().getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.FUNDETIAL);
+		productFun = (ProductFun) getIntent().getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.PRODUCTFUN);
 	}
 
 	private void initView() {
@@ -113,7 +119,8 @@ public class AddRemoteDeviceActivity extends BaseActionBarActivity implements On
 		}
 		Intent selectIntent = new Intent(this,SelectBrandActivity.class);
 		selectIntent.putExtra(InfraredCodeLibraryConstant.IntentTag.DEVICE_TYPE,type);
-		selectIntent.putExtra(InfraredCodeLibraryConstant.IntentTag.UFO, currUFO);
+		selectIntent.putExtra(InfraredCodeLibraryConstant.IntentTag.FUNDETIAL, funDetail);
+		selectIntent.putExtra(InfraredCodeLibraryConstant.IntentTag.PRODUCTFUN, productFun);
 		startActivity(selectIntent);
 	}
 }

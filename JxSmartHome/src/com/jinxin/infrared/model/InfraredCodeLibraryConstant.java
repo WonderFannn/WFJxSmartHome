@@ -9,6 +9,8 @@ public class InfraredCodeLibraryConstant {
 		public static final String BRAND = "BRAND";
 		public static final String MODEL = "MODEL";
 		public static final String UFO = "UFO";
+		public static final String PRODUCTFUN = "PRODUCTFUN";
+		public static final String FUNDETIAL = "FUNDETIAL";
 	}
 	public static class DataBase{
 		public static final String[] TABLENAME = {

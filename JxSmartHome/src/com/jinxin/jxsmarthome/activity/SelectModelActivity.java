@@ -8,6 +8,8 @@ import cn.jpush.android.api.b;
 import com.jinxin.infrared.model.InfraredCodeLibraryConstant;
 import com.jinxin.jxsmarthome.R;
 import com.jinxin.jxsmarthome.entity.CustomerProduct;
+import com.jinxin.jxsmarthome.entity.FunDetail;
+import com.jinxin.jxsmarthome.entity.ProductFun;
 
 import android.content.Intent;
 import android.content.res.Resources;
@@ -28,6 +30,8 @@ public class SelectModelActivity extends BaseActionBarActivity implements OnItem
 	private String brand;
 	
 	private CustomerProduct  currUFO = null;
+	private FunDetail funDetail;
+	private ProductFun productFun;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -44,8 +48,8 @@ public class SelectModelActivity extends BaseActionBarActivity implements OnItem
 		Intent intent = getIntent();
 		deviceType = intent.getIntExtra(InfraredCodeLibraryConstant.IntentTag.DEVICE_TYPE, 0);
 		brand = intent.getStringExtra(InfraredCodeLibraryConstant.IntentTag.BRAND);
-		currUFO = (CustomerProduct) intent.getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.UFO);
-
+		funDetail = (FunDetail) getIntent().getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.FUNDETIAL);
+		productFun = (ProductFun) getIntent().getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.PRODUCTFUN);
 		Log.d("wangfan", brand);
 		Resources res =getResources();
 		switch (deviceType) {
@@ -112,7 +116,8 @@ public class SelectModelActivity extends BaseActionBarActivity implements OnItem
 		intent.putExtra(InfraredCodeLibraryConstant.IntentTag.DEVICE_TYPE, deviceType);
 		intent.putExtra(InfraredCodeLibraryConstant.IntentTag.BRAND, brand);
 		intent.putExtra(InfraredCodeLibraryConstant.IntentTag.MODEL, strs[position]);
-		intent.putExtra(InfraredCodeLibraryConstant.IntentTag.UFO, currUFO);
+		intent.putExtra(InfraredCodeLibraryConstant.IntentTag.FUNDETIAL, funDetail);
+		intent.putExtra(InfraredCodeLibraryConstant.IntentTag.PRODUCTFUN, productFun);
 		startActivity(intent);
 	}
 }

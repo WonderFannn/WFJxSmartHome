@@ -1,20 +1,36 @@
 package com.jinxin.jxsmarthome.activity;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
+import com.jinxin.datan.local.util.NetworkModeSwitcher;
+import com.jinxin.datan.net.DatanAgentConnectResource;
 import com.jinxin.datan.net.command.CodeLibraryTask;
+import com.jinxin.datan.net.module.RemoteJsonResultInfo;
 import com.jinxin.datan.toolkit.task.ITask;
 import com.jinxin.datan.toolkit.task.ITaskListener;
+import com.jinxin.datan.toolkit.task.TaskListener;
 import com.jinxin.infrared.model.InfraredCodeLibraryConstant;
 import com.jinxin.infrared.model.InfraredCodeLibraryUtil;
 import com.jinxin.jxsmarthome.R;
+import com.jinxin.jxsmarthome.cmd.OfflineCmdGenerator;
+import com.jinxin.jxsmarthome.cmd.OfflineCmdSenderLong;
+import com.jinxin.jxsmarthome.cmd.OnlineCmdGenerator;
+import com.jinxin.jxsmarthome.cmd.OnlineCmdSenderLong;
+import com.jinxin.jxsmarthome.constant.StaticConstant;
 import com.jinxin.jxsmarthome.entity.CustomerProduct;
+import com.jinxin.jxsmarthome.entity.FunDetail;
+import com.jinxin.jxsmarthome.entity.ProductFun;
 import com.jinxin.jxsmarthome.main.JxshApp;
+import com.jinxin.jxsmarthome.util.AppUtil;
 import com.jinxin.jxsmarthome.util.ClassMemberUtil;
+import com.jinxin.jxsmarthome.util.Logger;
 
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -25,6 +41,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MatchDeviceActivity extends BaseActionBarActivity implements OnClickListener{
 	
@@ -50,11 +67,14 @@ public class MatchDeviceActivity extends BaseActionBarActivity implements OnClic
 	private int codeIndex = 1;
 	private int codeMax = 1;
 	
-	private CustomerProduct  currUFO = null;
+	private FunDetail funDetail;
+	private ProductFun productFun;
 	private InfraredCodeLibraryUtil mInfraredCodeLibraryUtil;
-	private CodeLibraryTask cLibraryTask = null;
 	private List<Integer> codeList;
 	private String mCode;
+	
+	private TaskListener<ITask> listener;
+	
 	
 	private void initViews() {
 		tvInfraredcodeShow = (TextView)findViewById( R.id.tv_infraredcode_show );
@@ -97,12 +117,29 @@ public class MatchDeviceActivity extends BaseActionBarActivity implements OnClic
 		deviceType = intent.getIntExtra(InfraredCodeLibraryConstant.IntentTag.DEVICE_TYPE, 0);
 		brand = intent.getStringExtra(InfraredCodeLibraryConstant.IntentTag.BRAND);
 		model = intent.getStringExtra(InfraredCodeLibraryConstant.IntentTag.MODEL);
-		currUFO = (CustomerProduct) intent.getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.UFO);
-		
-		
+		funDetail = (FunDetail) getIntent().getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.FUNDETIAL);
+		productFun = (ProductFun) getIntent().getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.PRODUCTFUN);
+		listener = new TaskListener<ITask>() {
+			@Override
+			public void onStarted(ITask task, Object arg) {
+			}
+			@Override
+			public void onCanceled(ITask task, Object arg) {
+			}
+			@Override
+			public void onFail(ITask task, Object[] arg) {
+			}
+			@Override
+			public void onSuccess(ITask task, Object[] arg) {
+			}
+			@Override
+			public void onProcess(ITask task, Object[] arg) {
+			}
+		};
 		mInfraredCodeLibraryUtil = new InfraredCodeLibraryUtil(this);
 		codeList = mInfraredCodeLibraryUtil.getCodeListByDeviceInfo(deviceType, brand, model);
 		codeMax = codeList.size();
+		
 		//TODO
 		mCode = codeList.get(codeIndex).intValue() + "";
 		
@@ -181,45 +218,36 @@ public class MatchDeviceActivity extends BaseActionBarActivity implements OnClic
 		}
 	}
 
-	
 	private void sendCmd(final int position){
-		if (brand == null || TextUtils.isEmpty(mCode) || currUFO == null) 	{
-			JxshApp.showToast(this, "brand or mode or ufo is null");
-			return;
-		}
+		Map<String, Object> map = null;
+		String type = null;
+		//TODO  构建命令
 		
-//		String keyName = getKeyname(position);
-		//TODO
-		cLibraryTask = new CodeLibraryTask(this, mCode, currUFO.getWhId(),
-				"test", 1, 1 , currUFO.getAddress485(), deviceType,"",-1);
-		cLibraryTask.addListener(new ITaskListener<ITask>() {
-
-			@Override
-			public void onStarted(ITask task, Object arg) {
-				JxshApp.showToast(getApplicationContext(), "指令已发送，请稍后...");
+		
+		List<byte[]> cmdAll = new ArrayList<byte[]>();
+		if (NetworkModeSwitcher.useOfflineMode(this)) {
+			String zegbingWhId = AppUtil.getGetwayMACByProductWhId(this, productFun.getWhId());
+			String localHost = OfflineCmdGenerator.getGatewayLocalIpBySn(this, zegbingWhId);
+			if(localHost == null || "".equals(localHost)) {
+				Logger.error(null, "localHost is null");
+				Toast.makeText(this, "网关离线", Toast.LENGTH_SHORT).show();
+				return;
 			}
-
-			@Override
-			public void onCanceled(ITask task, Object arg) {
-				JxshApp.closeLoading();
-			}
-
-			@Override
-			public void onFail(ITask task, Object[] arg) {
-				JxshApp.closeLoading();
-			}
-
-			@Override
-			public void onSuccess(ITask task, Object[] arg) {
-				JxshApp.closeLoading();
-//				mHandler.sendEmptyMessage(SHOW_DIALOG);
-			}
-
-			@Override
-			public void onProcess(ITask task, Object[] arg) {
-				
-			}
-		});
-		cLibraryTask.start();
+			OfflineCmdGenerator cmdGenerator = new OfflineCmdGenerator();
+			List<byte[]> cmdList = cmdGenerator.generateCmd2(this, productFun, funDetail, map, type);
+			cmdAll.addAll(cmdList);
+			OfflineCmdSenderLong offlineSender = new OfflineCmdSenderLong(this, 
+					localHost + ":3333", cmdAll, true, false);
+			offlineSender.addListener(listener);
+			offlineSender.send();
+		}else {
+			OnlineCmdGenerator cmdGenerator = new OnlineCmdGenerator();
+			List<byte[]> cmdList = cmdGenerator.generateCmd2(this, productFun, funDetail, map, type);
+			cmdAll.addAll(cmdList);
+			OnlineCmdSenderLong onlineSender = new OnlineCmdSenderLong(this, 
+					DatanAgentConnectResource.HOST_ZEGBING, true, cmdAll, true, 0, false);
+			onlineSender.addListener(listener);
+			onlineSender.send();
+		}
 	}
 }
