@@ -51,6 +51,32 @@ public class InfraredCodeLibraryUtil {
         return proList;
     }
 	
+	public List<String> getBrandtByDeviceType(int type){
+        List<String> brandList = new ArrayList<String>();
+        String typeString = InfraredCodeLibraryConstant.DataBase.TABLENAME[type];
+        
+        String sqlString = "select BRAND_CN from "+typeString+" group by PINYIN";
+        Log.d("wangfan", sqlString);
+        try{
+        	db = SQLiteDatabase.openDatabase(new String(DB_PATH + DB_NAME) , null, SQLiteDatabase.OPEN_READONLY);
+            Cursor cursor = db.rawQuery(sqlString,null);
+            if(null != cursor){
+                while(cursor.moveToNext()){
+                	String brand = cursor.getString(cursor.getColumnIndex("brand_cn"));
+                    brandList.add(brand);
+                }
+            }
+            cursor.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            if(null != db){
+                db.close();
+            }
+        }
+        return brandList;
+    }
+	
     public void packDataBase(Context context){
         // 检查 SQLite 数据库文件是否存在 
         if (!(new File(DB_PATH + DB_NAME)).exists()) {
