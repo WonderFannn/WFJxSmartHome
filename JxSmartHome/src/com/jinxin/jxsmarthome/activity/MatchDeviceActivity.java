@@ -70,8 +70,8 @@ public class MatchDeviceActivity extends BaseActionBarActivity implements OnClic
 	private FunDetail funDetail;
 	private ProductFun productFun;
 	private InfraredCodeLibraryUtil mInfraredCodeLibraryUtil;
-	private List<Integer> codeList;
-	private String mCode;
+	private List<byte[]> codeList;
+	private byte[] mCode;
 	
 	private TaskListener<ITask> listener;
 	
@@ -141,7 +141,7 @@ public class MatchDeviceActivity extends BaseActionBarActivity implements OnClic
 		codeMax = codeList.size();
 		
 		//TODO
-		mCode = codeList.get(codeIndex).intValue() + "";
+		mCode = codeList.get(codeIndex);
 		
 		
 		switch (deviceType) {
@@ -214,7 +214,7 @@ public class MatchDeviceActivity extends BaseActionBarActivity implements OnClic
 		if(i>0 && i<= codeMax){
 			codeIndex = i;
 			tvInfraredcodeShow.setText(codeIndex+"/"+codeMax);
-			mCode = codeList.get(codeIndex).intValue()+"";
+			mCode = codeList.get(codeIndex);
 		}
 	}
 

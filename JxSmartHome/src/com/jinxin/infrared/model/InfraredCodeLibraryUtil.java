@@ -23,22 +23,21 @@ public class InfraredCodeLibraryUtil {
 		packDataBase(context);
 	}
 	
-	public List<Integer> getCodeListByDeviceInfo(int type,String brand,String model){
-        List<Integer> proList = new ArrayList<Integer>();
+	public List<byte[]> getCodeListByDeviceInfo(int type,String brand,String model){
+        List<byte[]> proList = new ArrayList<byte[]>();
         String typeString = InfraredCodeLibraryConstant.DataBase.TABLENAME[type];
         if (model.equals("智能匹配")) {
 			model = "%";
 		}
-        String sqlString = "select SERIAL from "+typeString+" where brand_en = '"+brand+"' and model like '"+model+"' ";
+        String sqlString = "select CODE from "+typeString+" where brand_en = '"+brand+"' and model like '"+model+"' ";
         Log.d("wangfan", sqlString);
         try{
         	db = SQLiteDatabase.openDatabase(new String(DB_PATH + DB_NAME) , null, SQLiteDatabase.OPEN_READONLY);
             Cursor cursor = db.rawQuery(sqlString,null);
             if(null != cursor){
                 while(cursor.moveToNext()){
-                	int id = cursor.getInt(cursor.getColumnIndex("SERIAL"));
-                    Integer serial = new Integer(id);
-                    proList.add(serial);
+                	byte[] code = cursor.getBlob(cursor.getColumnIndex("code"));
+                    proList.add(code);
                 }
             }
             cursor.close();
