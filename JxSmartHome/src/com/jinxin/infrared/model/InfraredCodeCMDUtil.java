@@ -1,5 +1,7 @@
 package com.jinxin.infrared.model;
 
+import com.jinxin.jxsmarthome.util.ClassMemberUtil;
+
 public class InfraredCodeCMDUtil {
 	private int deviceType;
 	private String cmdType;
@@ -41,16 +43,30 @@ public class InfraredCodeCMDUtil {
 	private byte[] getKeyCode(int deviceType2, String cmdType2, byte[] code2) {
 		switch (deviceType2) {
 		case InfraredCodeLibraryConstant.DeviceType.AirCleaner:
-			
 			break;
-
+		case InfraredCodeLibraryConstant.DeviceType.AirCondition:
+			break;
+		case InfraredCodeLibraryConstant.DeviceType.Projector:
+			break;
+		case InfraredCodeLibraryConstant.DeviceType.Fan:
+			break;
+		case InfraredCodeLibraryConstant.DeviceType.TvBox:
+			break;
+		case InfraredCodeLibraryConstant.DeviceType.Tv:
+			break;
+		case InfraredCodeLibraryConstant.DeviceType.InternetTv:
+			break;
+		case InfraredCodeLibraryConstant.DeviceType.Dvd:
+			break;
+		case InfraredCodeLibraryConstant.DeviceType.Calorifier:
+			break;
+		case InfraredCodeLibraryConstant.DeviceType.Camera:
+			break;
 		default:
 			break;
 		}
 		
 		return null;
 	}
-
-	
 
 }
