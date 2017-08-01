@@ -11,6 +11,7 @@ import com.jinxin.datan.net.module.RemoteJsonResultInfo;
 import com.jinxin.datan.toolkit.task.ITask;
 import com.jinxin.datan.toolkit.task.ITaskListener;
 import com.jinxin.datan.toolkit.task.TaskListener;
+import com.jinxin.infrared.model.InfraredCodeCMDUtil;
 import com.jinxin.infrared.model.InfraredCodeLibraryConstant;
 import com.jinxin.infrared.model.InfraredCodeLibraryUtil;
 import com.jinxin.jxsmarthome.R;
@@ -70,6 +71,8 @@ public class MatchDeviceActivity extends BaseActionBarActivity implements OnClic
 	private FunDetail funDetail;
 	private ProductFun productFun;
 	private InfraredCodeLibraryUtil mInfraredCodeLibraryUtil;
+	private InfraredCodeCMDUtil mInfraredCodeCMDUtil;
+	
 	private List<byte[]> codeList;
 	private byte[] mCode;
 	
@@ -140,10 +143,6 @@ public class MatchDeviceActivity extends BaseActionBarActivity implements OnClic
 		codeList = mInfraredCodeLibraryUtil.getCodeListByDeviceInfo(deviceType, brand, model);
 		codeMax = codeList.size();
 		
-		//TODO
-		mCode = codeList.get(codeIndex);
-		
-		
 		switch (deviceType) {
 		case InfraredCodeLibraryConstant.DeviceType.AirCleaner:
 			codeTestResource = ClassMemberUtil.getObjAttr(new InfraredCodeLibraryConstant.MatchCodeImage.AirCleaner());
@@ -203,7 +202,7 @@ public class MatchDeviceActivity extends BaseActionBarActivity implements OnClic
 		case R.id.iv_btn_codetest_2:
 		case R.id.iv_btn_codetest_3:
 		case R.id.iv_btn_codetest_4:
-			sendCmd(1);
+			sendCmd("power");
 			break;
 		default:
 			break;
@@ -218,11 +217,14 @@ public class MatchDeviceActivity extends BaseActionBarActivity implements OnClic
 		}
 	}
 
-	private void sendCmd(final int position){
-		Map<String, Object> map = null;
-		String type = null;
-		//TODO  构建命令
+	private void sendCmd(String cmdtype){
 		
+		mCode = codeList.get(codeIndex-1);
+		mInfraredCodeCMDUtil = new InfraredCodeCMDUtil(deviceType, cmdtype, mCode);
+		byte[] opCmd = mInfraredCodeCMDUtil.getCMD();
+		
+		Map<String, Object> map = null;
+		String type = "3";
 		
 		List<byte[]> cmdAll = new ArrayList<byte[]>();
 		if (NetworkModeSwitcher.useOfflineMode(this)) {

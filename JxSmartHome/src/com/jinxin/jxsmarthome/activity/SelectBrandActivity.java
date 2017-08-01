@@ -1,6 +1,9 @@
 package com.jinxin.jxsmarthome.activity;
 
+import java.util.List;
+
 import com.jinxin.infrared.model.InfraredCodeLibraryConstant;
+import com.jinxin.infrared.model.InfraredCodeLibraryUtil;
 import com.jinxin.jxsmarthome.R;
 import com.jinxin.jxsmarthome.entity.CustomerProduct;
 import com.jinxin.jxsmarthome.entity.FunDetail;
@@ -21,8 +24,9 @@ public class SelectBrandActivity extends BaseActionBarActivity implements OnItem
 	private ListView lv;
 	private String[] strs;
 	private int deviceType;
-	
-	private CustomerProduct  currUFO = null;
+
+	private InfraredCodeLibraryUtil mInfraredCodeLibraryUtil;
+
 	
 	private FunDetail funDetail;
 	private ProductFun productFun;
@@ -42,44 +46,49 @@ public class SelectBrandActivity extends BaseActionBarActivity implements OnItem
 		deviceType = intent.getIntExtra(InfraredCodeLibraryConstant.IntentTag.DEVICE_TYPE, 0);
 		funDetail = (FunDetail) getIntent().getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.FUNDETIAL);
 		productFun = (ProductFun) getIntent().getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.PRODUCTFUN);
-		Resources res =getResources();
-		switch (deviceType) {
-		case InfraredCodeLibraryConstant.DeviceType.AirCleaner:
-			strs = res.getStringArray(R.array.air_cleaner_brand);
-			break;
-		case InfraredCodeLibraryConstant.DeviceType.AirCondition:
-			strs = res.getStringArray(R.array.air_condition_brand);
-			break;
-		case InfraredCodeLibraryConstant.DeviceType.Projector:
-			strs = res.getStringArray(R.array.projector_brand);
-			break;
-		case InfraredCodeLibraryConstant.DeviceType.Fan:
-			strs = res.getStringArray(R.array.fan_brand);
-			break;
-		case InfraredCodeLibraryConstant.DeviceType.TvBox:
-			strs = res.getStringArray(R.array.tv_box_brand);
-			break;
-		case InfraredCodeLibraryConstant.DeviceType.Tv:
-			strs = res.getStringArray(R.array.tv_brand);
-			break;
-		case InfraredCodeLibraryConstant.DeviceType.InternetTv:
-			strs = res.getStringArray(R.array.internet_tv_brand);
-			break;
-		case InfraredCodeLibraryConstant.DeviceType.Dvd:
-			strs = res.getStringArray(R.array.dvd_brand);
-			break;
-		case InfraredCodeLibraryConstant.DeviceType.Calorifier:
-			strs = res.getStringArray(R.array.calorifier_brand);
-			break;
-		case InfraredCodeLibraryConstant.DeviceType.Camera:
-			strs = res.getStringArray(R.array.camera_brand);
-			break;
-
-		default:
-			strs = new String[1];
-			strs[0] = "error";
-			break;
-		}
+		
+		mInfraredCodeLibraryUtil = new InfraredCodeLibraryUtil(this);
+		List<String> brandList = mInfraredCodeLibraryUtil.getBrandtByDeviceType(deviceType);
+		strs = new String[brandList.size()];
+		strs = brandList.toArray(strs);
+//		Resources res =getResources();
+//		switch (deviceType) {
+//		case InfraredCodeLibraryConstant.DeviceType.AirCleaner:
+//			strs = res.getStringArray(R.array.air_cleaner_brand);
+//			break;
+//		case InfraredCodeLibraryConstant.DeviceType.AirCondition:
+//			strs = res.getStringArray(R.array.air_condition_brand);
+//			break;
+//		case InfraredCodeLibraryConstant.DeviceType.Projector:
+//			strs = res.getStringArray(R.array.projector_brand);
+//			break;
+//		case InfraredCodeLibraryConstant.DeviceType.Fan:
+//			strs = res.getStringArray(R.array.fan_brand);
+//			break;
+//		case InfraredCodeLibraryConstant.DeviceType.TvBox:
+//			strs = res.getStringArray(R.array.tv_box_brand);
+//			break;
+//		case InfraredCodeLibraryConstant.DeviceType.Tv:
+//			strs = res.getStringArray(R.array.tv_brand);
+//			break;
+//		case InfraredCodeLibraryConstant.DeviceType.InternetTv:
+//			strs = res.getStringArray(R.array.internet_tv_brand);
+//			break;
+//		case InfraredCodeLibraryConstant.DeviceType.Dvd:
+//			strs = res.getStringArray(R.array.dvd_brand);
+//			break;
+//		case InfraredCodeLibraryConstant.DeviceType.Calorifier:
+//			strs = res.getStringArray(R.array.calorifier_brand);
+//			break;
+//		case InfraredCodeLibraryConstant.DeviceType.Camera:
+//			strs = res.getStringArray(R.array.camera_brand);
+//			break;
+//
+//		default:
+//			strs = new String[1];
+//			strs[0] = "error";
+//			break;
+//		}
 		lv.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, strs));
 		lv.setOnItemClickListener(this);
 	}
@@ -88,8 +97,8 @@ public class SelectBrandActivity extends BaseActionBarActivity implements OnItem
 			long id) {
 		Intent selectModelIntent = new Intent(this,SelectModelActivity.class);
 		selectModelIntent.putExtra(InfraredCodeLibraryConstant.IntentTag.DEVICE_TYPE, deviceType);
-		//将括号内英文品牌名发到下个界面
-		selectModelIntent.putExtra(InfraredCodeLibraryConstant.IntentTag.BRAND, strs[position].substring(strs[position].indexOf("(")+1, strs[position].indexOf(")")));
+		//将括号内中文品牌名发到下个界面
+		selectModelIntent.putExtra(InfraredCodeLibraryConstant.IntentTag.BRAND, strs[position]);                                                                                                  
 		selectModelIntent.putExtra(InfraredCodeLibraryConstant.IntentTag.FUNDETIAL, funDetail);
 		selectModelIntent.putExtra(InfraredCodeLibraryConstant.IntentTag.PRODUCTFUN, productFun);
 		startActivity(selectModelIntent);

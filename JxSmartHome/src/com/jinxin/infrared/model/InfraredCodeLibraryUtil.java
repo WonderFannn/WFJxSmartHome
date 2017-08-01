@@ -29,7 +29,7 @@ public class InfraredCodeLibraryUtil {
         if (model.equals("智能匹配")) {
 			model = "%";
 		}
-        String sqlString = "select CODE from "+typeString+" where brand_en = '"+brand+"' and model like '"+model+"' ";
+        String sqlString = "select CODE from "+typeString+" where brand_cn = '"+brand+"' and model like '"+model+"' ";
         Log.d("wangfan", sqlString);
         try{
         	db = SQLiteDatabase.openDatabase(new String(DB_PATH + DB_NAME) , null, SQLiteDatabase.OPEN_READONLY);
@@ -55,14 +55,14 @@ public class InfraredCodeLibraryUtil {
         List<String> brandList = new ArrayList<String>();
         String typeString = InfraredCodeLibraryConstant.DataBase.TABLENAME[type];
         
-        String sqlString = "select BRAND_CN from "+typeString+" group by PINYIN";
+        String sqlString = "select BRAND_CN from "+typeString+" group by BRAND_CN";
         Log.d("wangfan", sqlString);
         try{
         	db = SQLiteDatabase.openDatabase(new String(DB_PATH + DB_NAME) , null, SQLiteDatabase.OPEN_READONLY);
             Cursor cursor = db.rawQuery(sqlString,null);
             if(null != cursor){
                 while(cursor.moveToNext()){
-                	String brand = cursor.getString(cursor.getColumnIndex("brand_cn"));
+                	String brand = cursor.getString(cursor.getColumnIndex("BRAND_CN"));
                     brandList.add(brand);
                 }
             }
@@ -76,6 +76,30 @@ public class InfraredCodeLibraryUtil {
         }
         return brandList;
     }
+	public List<String> getModelByDeviceTypeAndBrand(int type,String brand){
+		List<String> modeList = new ArrayList<String>();
+		String typeString = InfraredCodeLibraryConstant.DataBase.TABLENAME[type];
+		String sqlString = "select MODEL from "+typeString+" where BRAND_CN = '"+brand+"' and MODEL != 'no_model'";
+		Log.d("wangfan", sqlString);
+		try{
+			db = SQLiteDatabase.openDatabase(new String(DB_PATH + DB_NAME) , null, SQLiteDatabase.OPEN_READONLY);
+			Cursor cursor = db.rawQuery(sqlString,null);
+			if(null != cursor){
+				while(cursor.moveToNext()){
+					String model = cursor.getString(cursor.getColumnIndex("MODEL"));
+					modeList.add(model);
+				}
+			}
+			cursor.close();
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			if(null != db){
+				db.close();
+			}
+		}
+		return modeList;
+	}
 	
     public void packDataBase(Context context){
         // 检查 SQLite 数据库文件是否存在 

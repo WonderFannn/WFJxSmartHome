@@ -2,13 +2,6 @@ package com.jinxin.infrared.model;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import org.apache.commons.net.nntp.NewGroupsOrNewsQuery;
-
-import u.aly.cm;
-
-import android.R.integer;
-
 import com.jinxin.jxsmarthome.util.ClassMemberUtil;
 
 public class InfraredCodeCMDUtil {
@@ -23,23 +16,47 @@ public class InfraredCodeCMDUtil {
 	}
 	
 	public byte[] getCMD() {
-		//TODO
 		byte[] cmd = null;
 		if (deviceType != InfraredCodeLibraryConstant.DeviceType.AirCondition) {
 			byte[] head = {0x30,0x00};
 			byte fcode = code[0];
 			byte[] keycode = getKeyCode( deviceType, cmdType, code);
 			byte[] comcode = {code[code.length-4],code[code.length-3],code[code.length-2],code[code.length-1]};
+			cmd = byteMerge(head,byteMerge(fcode, byteMerge(keycode, comcode)));
 			byte check = calculateCheckCode(cmd);
+			cmd = byteMerge(cmd, check);
+		}else {
+			//TODO 空调命令拼写
 		}
-		
-		
-		
-		
-		
 		return cmd;
 		
 	}
+
+	private byte[] byteMerge(byte[] a, byte[] b) {
+		byte[] c = new byte[a.length+b.length];
+		System.arraycopy(a, 0, c, 0, a.length);
+		System.arraycopy(b, 0, c, a.length, b.length);
+		return c;
+	}
+	private byte[] byteMerge(byte[] a, byte b) {
+		byte[] c = new byte[a.length+1];
+		System.arraycopy(a, 0, c, 0, a.length);
+		System.arraycopy(b, 0, c, a.length, 1);
+		return c;
+	}
+	private byte[] byteMerge(byte a, byte[] b) {
+		byte[] c = new byte[1+b.length];
+		System.arraycopy(a, 0, c, 0, 1);
+		System.arraycopy(b, 0, c, 1, b.length);
+		return c;
+	}
+	private byte[] byteMerge(byte a, byte b) {
+		byte[] c = new byte[2];
+		c[0] = a;
+		c[1] = b;
+		return c;
+	}
+
 
 	private byte calculateCheckCode(byte[] cmd) {
 		byte a = 0;
