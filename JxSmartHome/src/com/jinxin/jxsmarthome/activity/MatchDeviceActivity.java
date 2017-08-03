@@ -249,16 +249,7 @@ public class MatchDeviceActivity extends BaseActionBarActivity implements
 			index2 = 0;
 			break;
 		}
-		// "AIR_TABLE",// 0
-		// "ARC_TABLE",// 1
-		// "PJT_TABLE",// 2
-		// "FAN_TABLE",// 3
-		// "TVBOX_TABLE",// 4
-		// "TV_TABLE",// 5
-		// "IPTV_TABLE",// 6
-		// "DVD_TABLE",// 7
-		// "WATER_TABLE",// 8
-		// "SLR_TABLE",// 9
+
 		String[][] matchCodeCMDArray = {
 				{ "AIR_Power", "AIR_Timer", "AIR_Mute", "AIR_Mode" }, // 空气净化器
 				{ "ARC_Power", "ARC_Vol", "ARC_tmpAdd", "ARC_Mode" },// 空调

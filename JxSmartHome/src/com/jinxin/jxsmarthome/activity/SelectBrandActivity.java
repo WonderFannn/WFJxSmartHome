@@ -51,44 +51,6 @@ public class SelectBrandActivity extends BaseActionBarActivity implements OnItem
 		List<String> brandList = mInfraredCodeLibraryUtil.getBrandtByDeviceType(deviceType);
 		strs = new String[brandList.size()];
 		strs = brandList.toArray(strs);
-//		Resources res =getResources();
-//		switch (deviceType) {
-//		case InfraredCodeLibraryConstant.DeviceType.AirCleaner:
-//			strs = res.getStringArray(R.array.air_cleaner_brand);
-//			break;
-//		case InfraredCodeLibraryConstant.DeviceType.AirCondition:
-//			strs = res.getStringArray(R.array.air_condition_brand);
-//			break;
-//		case InfraredCodeLibraryConstant.DeviceType.Projector:
-//			strs = res.getStringArray(R.array.projector_brand);
-//			break;
-//		case InfraredCodeLibraryConstant.DeviceType.Fan:
-//			strs = res.getStringArray(R.array.fan_brand);
-//			break;
-//		case InfraredCodeLibraryConstant.DeviceType.TvBox:
-//			strs = res.getStringArray(R.array.tv_box_brand);
-//			break;
-//		case InfraredCodeLibraryConstant.DeviceType.Tv:
-//			strs = res.getStringArray(R.array.tv_brand);
-//			break;
-//		case InfraredCodeLibraryConstant.DeviceType.InternetTv:
-//			strs = res.getStringArray(R.array.internet_tv_brand);
-//			break;
-//		case InfraredCodeLibraryConstant.DeviceType.Dvd:
-//			strs = res.getStringArray(R.array.dvd_brand);
-//			break;
-//		case InfraredCodeLibraryConstant.DeviceType.Calorifier:
-//			strs = res.getStringArray(R.array.calorifier_brand);
-//			break;
-//		case InfraredCodeLibraryConstant.DeviceType.Camera:
-//			strs = res.getStringArray(R.array.camera_brand);
-//			break;
-//
-//		default:
-//			strs = new String[1];
-//			strs[0] = "error";
-//			break;
-//		}
 		lv.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, strs));
 		lv.setOnItemClickListener(this);
 	}
