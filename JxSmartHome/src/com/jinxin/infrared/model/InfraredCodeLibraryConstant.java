@@ -14,7 +14,8 @@ public class InfraredCodeLibraryConstant {
 	}
 
 	public static class DataBase {
-		public static final String[] TABLENAME = { "AIR_TABLE",// 0
+		public static final String[] TABLENAME = { 
+				"AIR_TABLE",// 0
 				"ARC_TABLE",// 1
 				"PJT_TABLE",// 2
 				"FAN_TABLE",// 3
@@ -50,14 +51,14 @@ public class InfraredCodeLibraryConstant {
 
 		public static class AirCondition {
 			public static final int POWER = R.drawable.btn_matchcode_power;
-			public static final int TIMER = R.drawable.btn_matchcode_timer;
+			public static final int MUTE = R.drawable.btn_matchcode_mute;
 			public static final int TEMPERATURE_UP = R.drawable.btn_matchcode_temperature_up;
 			public static final int MODE = R.drawable.btn_matchcode_mode;
 		}
 
 		public static class Projector {
-			public static final int POWER = R.drawable.btn_matchcode_power;
-			public static final int TIMER = R.drawable.btn_matchcode_timer;
+			public static final int POWER_ON = R.drawable.btn_matchcode_power;
+			public static final int POWER_OFF = R.drawable.btn_matchcode_power;
 			public static final int MUTE = R.drawable.btn_matchcode_mute;
 			public static final int SCREEN = R.drawable.btn_matchcode_screen;
 		}
@@ -71,21 +72,21 @@ public class InfraredCodeLibraryConstant {
 
 		public static class TvBox {
 			public static final int POWER = R.drawable.btn_matchcode_power;
-			public static final int TIMER = R.drawable.btn_matchcode_timer;
+			public static final int MENU = R.drawable.btn_matchcode_menu;
 			public static final int CHANNEL_ADD = R.drawable.btn_matchcode_channel_add;
 			public static final int VOICE_UP = R.drawable.btn_matchcode_voice_up;
 		}
 
 		public static class Tv {
 			public static final int POWER = R.drawable.btn_matchcode_power;
-			public static final int TIMER = R.drawable.btn_matchcode_timer;
+			public static final int MENU = R.drawable.btn_matchcode_menu;
 			public static final int CHANNEL_ADD = R.drawable.btn_matchcode_channel_add;
 			public static final int VOICE_UP = R.drawable.btn_matchcode_voice_up;
 		}
 
 		public static class InternetTv {
 			public static final int POWER = R.drawable.btn_matchcode_power;
-			public static final int TIMER = R.drawable.btn_matchcode_timer;
+			public static final int MUTE = R.drawable.btn_matchcode_mute;
 			public static final int CHANNEL_ADD = R.drawable.btn_matchcode_channel_add;
 			public static final int VOICE_UP = R.drawable.btn_matchcode_voice_up;
 		}
@@ -139,7 +140,7 @@ public class InfraredCodeLibraryConstant {
 	}
 
 	public static class FanKeyBoadMap {
-		public static final int FAN_On_Off = 1; // 开关
+		public static final int FAN_Power = 1; // 开关
 		public static final int FAN_On_speed = 3; // 开／风速
 		public static final int FAN_Shake = 5; // 摇头
 		public static final int FAN_Mode = 7; // 风类（模式）

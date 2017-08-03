@@ -29,7 +29,7 @@ public class InfraredCodeLibraryUtil {
         if (model.equals("智能匹配")) {
 			model = "%";
 		}
-        String sqlString = "select CODE from "+typeString+" where brand_cn = '"+brand+"' and model like '"+model+"' ";
+        String sqlString = "select CODE from "+typeString+" where BRAND_CN = '"+brand+"' and MODEL like '"+model+"' ";
         Log.d("wangfan", sqlString);
         try{
         	db = SQLiteDatabase.openDatabase(new String(DB_PATH + DB_NAME) , null, SQLiteDatabase.OPEN_READONLY);
