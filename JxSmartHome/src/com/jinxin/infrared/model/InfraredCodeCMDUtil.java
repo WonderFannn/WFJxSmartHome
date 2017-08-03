@@ -41,12 +41,12 @@ public class InfraredCodeCMDUtil {
 	private byte[] byteMerge(byte[] a, byte b) {
 		byte[] c = new byte[a.length+1];
 		System.arraycopy(a, 0, c, 0, a.length);
-		System.arraycopy(b, 0, c, a.length, 1);
+		c[a.length] = b;
 		return c;
 	}
 	private byte[] byteMerge(byte a, byte[] b) {
 		byte[] c = new byte[1+b.length];
-		System.arraycopy(a, 0, c, 0, 1);
+		c[0] = a;
 		System.arraycopy(b, 0, c, 1, b.length);
 		return c;
 	}

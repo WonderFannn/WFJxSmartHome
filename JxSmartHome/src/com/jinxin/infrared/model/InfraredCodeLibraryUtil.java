@@ -36,7 +36,7 @@ public class InfraredCodeLibraryUtil {
             Cursor cursor = db.rawQuery(sqlString,null);
             if(null != cursor){
                 while(cursor.moveToNext()){
-                	byte[] code = cursor.getBlob(cursor.getColumnIndex("code"));
+                	byte[] code = cursor.getBlob(cursor.getColumnIndex("CODE"));
                     proList.add(code);
                 }
             }
