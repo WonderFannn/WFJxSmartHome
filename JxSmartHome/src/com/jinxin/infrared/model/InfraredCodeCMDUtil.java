@@ -25,6 +25,13 @@ public class InfraredCodeCMDUtil {
 			cmd = byteMerge(head,byteMerge(fcode, byteMerge(keycode, comcode)));
 			byte check = calculateCheckCode(cmd);
 			cmd = byteMerge(cmd, check);
+			//特殊情况处理
+			if(cmd[2] == 0x04){
+				cmd[5] ^= 0x20;
+			}else if(cmd[2] == 0x0a){
+				cmd[5] ^= 0x08;
+			}
+			
 		}else {
 			//TODO 空调命令拼写
 		}
