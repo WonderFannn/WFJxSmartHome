@@ -31,7 +31,6 @@ public class InfraredCodeCMDUtil {
 			}else if(cmd[2] == 0x0a){
 				cmd[5] ^= 0x08;
 			}
-			
 		}else {
 			//TODO 空调命令拼写
 		}
@@ -57,6 +56,8 @@ public class InfraredCodeCMDUtil {
 		System.arraycopy(b, 0, c, 1, b.length);
 		return c;
 	}
+	
+	
 	private byte[] byteMerge(byte a, byte b) {
 		byte[] c = new byte[2];
 		c[0] = a;
@@ -116,4 +117,117 @@ public class InfraredCodeCMDUtil {
 		return keyCode;
 	}
 
+	/*
+	 //均以接收数据为准
+int compareMatch(const uint8_t *rev,int revLenth,const uint8_t *loc,int locLenth)
+{
+    if(revLenth!=230||locLenth!=230)
+    {
+        printf("数据长度不对");
+        return 0;
+    }
+    
+    int rffhead,rfHead;
+    int lffhead,lfHead;
+
+    if(!locateCompareFlag(rev,revLenth,&rffhead,&rfHead))
+    {
+        printf("收到数据定位flag错误");
+        return 0;
+    }
+    
+    if(!locateCompareFlag(loc,locLenth,&lffhead,&lfHead))
+    {
+        printf("本地数据定位flag错误");
+        return 0;
+    }
+    if(rffhead!=lffhead)
+    {
+        printf("FF头定位不同");
+        return 0;
+    }
+    if(rfHead!=lfHead)
+    {
+        printf("Fx/xF头定位不同");
+        return 0;
+    }
+    
+    //1、首先前4字节必须全部相同
+    for(int i=0;i<4;i++)
+    {
+        if(*(rev+i)!=*(loc+i))
+        {
+            printf("前4字节不相同");
+            return 0;
+        }
+    }
+
+    int sameSum = 0;
+    //2、第5字节到rffhead之前 相差20%以内算相同
+    for(int i=4;i<rffhead;i++)
+    {
+        int revValue = *(rev+i);
+        int locValue = *(loc+i);
+        if(revValue==0x0)
+        {
+            if(locValue==0x0)sameSum++;
+        }
+        else
+        {
+            float k = abs(revValue-locValue)/(float)revValue;
+            if(k<0.2)
+            {
+                sameSum++;
+            }
+        }
+    }
+    
+    //3、首个0xff（包括）到0x?f／0xf? 之间完全相同才算相同
+    int stride = rfHead-rffhead;
+    
+    uint8_t *rp = (uint8_t *)(rev+rffhead);
+    uint8_t *lp = (uint8_t *)(loc+lffhead);
+    
+    for(int i=0;i<stride;i++)
+    {
+        if(*(rp+i)==*(lp+i))sameSum++;
+    }
+    return sameSum;
+}
+
+bool locateCompareFlag(const uint8_t *dat,int datLenth,int *ffHead,int *fHead)
+{
+    for(int i=4;i<datLenth;i++)
+    {
+        if(*(dat+i)==0xff)
+        {
+            for(int j=i;j<datLenth;j++)
+            {
+                if(*(dat+j)!=0xff)
+                {
+                    if(j>i&&j>0&&i>0)
+                    {
+                        for(int k=j;k<datLenth;k++)
+                        {
+                            if((*(dat+k)&0x0f)==0x0f||(*(dat+k)&0xf0)==0xf0)
+                            {
+                                if(k>=j)
+                                {
+                                    *ffHead = i;
+                                    *fHead = k;
+                                    return true;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return false;
+}
+
+	  */
+	
+	
 }
