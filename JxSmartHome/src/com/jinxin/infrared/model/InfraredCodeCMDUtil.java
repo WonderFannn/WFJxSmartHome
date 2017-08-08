@@ -128,12 +128,12 @@ public class InfraredCodeCMDUtil {
 	}
 
 	// 均以接收数据为准
-	int compareMatch(byte[] rev, byte[] loc) {
+	private int compareMatch(byte[] rev, byte[] loc) {
 		if (rev.length != 230 || loc.length != 230) {
 			// printf("数据长度不对");
 			return 0;
 		}
-
+		//第一位表示第一个0xff位置，第二位表示截止的0xf的位置
 		int[] rfIndex = new int[2];
 		int[] lfIndex = new int[2];
 
