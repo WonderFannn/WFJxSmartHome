@@ -30,9 +30,9 @@ public class InfraredCodeLibraryUtil {
 		if (model.equals("智能匹配")) {
 			model = "%";
 		}
-		String sqlString = "select * from " + typeString
+		String sqlString = "select CODE from " + typeString
 				+ " where BRAND_CN = '" + brand + "' and MODEL like '" + model
-				+ "' ";
+				+ "' group by CODE";
 		Log.d("wangfan", sqlString);
 		try {
 			db = SQLiteDatabase.openDatabase(new String(DB_PATH + DB_NAME),
@@ -41,11 +41,6 @@ public class InfraredCodeLibraryUtil {
 			if (null != cursor) {
 				while (cursor.moveToNext()) {
 					byte[] code = cursor.getBlob(cursor.getColumnIndex("CODE"));
-					if (type == InfraredCodeLibraryConstant.DeviceType.AirCondition) {
-						int serial = cursor.getInt(cursor.getColumnIndex("SERIAL"));
-						byte[] code1 = IntToByteArray(serial);
-						code = byteMerge(code1, code);
-					}
 					proList.add(code);
 				}
 			}

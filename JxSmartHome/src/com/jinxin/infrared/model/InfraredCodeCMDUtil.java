@@ -33,7 +33,8 @@ public class InfraredCodeCMDUtil {
 				cmd[5] ^= 0x08;
 			}
 		} else {
-			// TODO 空调命令拼写
+			// 空调命令拼写
+			cmd = code;
 		}
 		return cmd;
 
@@ -191,7 +192,7 @@ public class InfraredCodeCMDUtil {
 		return sameSum;
 	}
 
-	boolean locateCompareFlag(byte[] dat, int[] rfHead) {
+	private boolean locateCompareFlag(byte[] dat, int[] rfHead) {
 		for (int i = 4; i < dat.length; i++) {
 			if (dat[i] == 0xff) {
 				for (int j = i; j < dat.length; j++) {
