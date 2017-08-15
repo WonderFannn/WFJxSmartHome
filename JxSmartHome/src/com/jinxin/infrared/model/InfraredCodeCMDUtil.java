@@ -35,16 +35,23 @@ public class InfraredCodeCMDUtil {
 		} else {
 			// 空调命令拼写
 			cmd = code;
+			int serial = ((cmd[0]<<8) | cmd[1]);
+			if (serial > 510) {
+				serial -= 510;
+			}
+			cmd[0] = (byte) ((serial>>8) & 0xff);
+			cmd[1] = (byte) (serial & 0xff);
+			
 			Map<String, Integer> map = new HashMap<>();
 			map = ClassMemberUtil.getObjMap(new InfraredCodeLibraryConstant.ARCKeyBoadMap());
 			byte opCmd = (byte) map.get(cmdType).intValue();
 			code[9] = opCmd;
 			switch (opCmd) {
 			case InfraredCodeLibraryConstant.ARCKeyBoadMap.ARC_Power:
-				code[8] = (byte) ((code[8]+1)%2);
+				cmd[8] = (byte) ((cmd[8]+1)%2);
 				break;
 			case InfraredCodeLibraryConstant.ARCKeyBoadMap.ARC_Mode:
-				code[10] = (byte) (code[10]%5+1);
+				cmd[10] = (byte) (cmd[10]%5+1);
 				break;
 			default:
 				break;
