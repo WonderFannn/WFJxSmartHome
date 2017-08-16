@@ -1,9 +1,17 @@
 package com.jinxin.jxsmarthome.activity;
 
+import java.util.List;
+
 import u.aly.de;
 
+import com.jinxin.infrared.model.InfraredCodeCMDUtil;
+import com.jinxin.infrared.model.InfraredCodeLibraryConstant;
+import com.jinxin.infrared.model.InfraredCodeLibraryUtil;
 import com.jinxin.jxsmarthome.R;
+import com.jinxin.jxsmarthome.entity.FunDetail;
+import com.jinxin.jxsmarthome.entity.ProductFun;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -28,6 +36,15 @@ public class SaveRemoteControllerActivity extends BaseActionBarActivity implemen
 	private FrameLayout btnNowSelect;
 	private String deviceName = "";
 	
+	private int deviceType;
+	private String brand;
+	private byte[] mCode;
+
+	private FunDetail funDetail;
+	private ProductFun productFun;
+
+
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -39,12 +56,19 @@ public class SaveRemoteControllerActivity extends BaseActionBarActivity implemen
 	}
 
 	private void initData() {
-		// TODO Auto-generated method stub
+		Intent intent = getIntent();
+		deviceType = intent.getIntExtra(InfraredCodeLibraryConstant.IntentTag.DEVICE_TYPE, 0);
+		brand = intent.getStringExtra(InfraredCodeLibraryConstant.IntentTag.BRAND);
+		mCode = intent.getByteArrayExtra(InfraredCodeLibraryConstant.IntentTag.CODE);
+		funDetail = (FunDetail) getIntent().getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.FUNDETIAL);
+		productFun = (ProductFun) getIntent().getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.PRODUCTFUN);
 		
+		deviceName = brand+InfraredCodeLibraryConstant.DEVICE_NAME_CN[deviceType];
 	}
 
 	private void initViews() {
 		etDeviceName = (EditText)findViewById( R.id.et_device_name );
+		etDeviceName.setText(deviceName);
 		etDeviceName.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -79,7 +103,8 @@ public class SaveRemoteControllerActivity extends BaseActionBarActivity implemen
 	@Override
 	public void onClick(View v) {
 		if (v == btnSave) {
-			//todo
+			//TODO 保存遥控器信息
+			
 		}else if (v == btnReturn) {
 			finish();
 		}else {

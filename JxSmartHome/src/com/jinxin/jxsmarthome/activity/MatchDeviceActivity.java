@@ -116,16 +116,12 @@ public class MatchDeviceActivity extends BaseActionBarActivity implements
 
 	private void initData() {
 		Intent intent = getIntent();
-		deviceType = intent.getIntExtra(
-				InfraredCodeLibraryConstant.IntentTag.DEVICE_TYPE, 0);
-		brand = intent
-				.getStringExtra(InfraredCodeLibraryConstant.IntentTag.BRAND);
-		model = intent
-				.getStringExtra(InfraredCodeLibraryConstant.IntentTag.MODEL);
-		funDetail = (FunDetail) getIntent().getSerializableExtra(
-				InfraredCodeLibraryConstant.IntentTag.FUNDETIAL);
-		productFun = (ProductFun) getIntent().getSerializableExtra(
-				InfraredCodeLibraryConstant.IntentTag.PRODUCTFUN);
+		deviceType = intent.getIntExtra(InfraredCodeLibraryConstant.IntentTag.DEVICE_TYPE, 0);
+		brand = intent.getStringExtra(InfraredCodeLibraryConstant.IntentTag.BRAND);
+		model = intent.getStringExtra(InfraredCodeLibraryConstant.IntentTag.MODEL);
+		funDetail = (FunDetail) getIntent().getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.FUNDETIAL);
+		productFun = (ProductFun) getIntent().getSerializableExtra(InfraredCodeLibraryConstant.IntentTag.PRODUCTFUN);
+		
 		listener = new TaskListener<ITask>() {
 			@Override
 			public void onStarted(ITask task, Object arg) {
@@ -215,7 +211,11 @@ public class MatchDeviceActivity extends BaseActionBarActivity implements
 			break;
 		case R.id.tv_btn_next_step:
 			Intent intent = new Intent(this, SaveRemoteControllerActivity.class);
-
+			intent.putExtra(InfraredCodeLibraryConstant.IntentTag.DEVICE_TYPE, deviceType);
+			intent.putExtra(InfraredCodeLibraryConstant.IntentTag.BRAND, brand); 
+			intent.putExtra(InfraredCodeLibraryConstant.IntentTag.CODE, mCode); 
+			intent.putExtra(InfraredCodeLibraryConstant.IntentTag.FUNDETIAL, funDetail);
+			intent.putExtra(InfraredCodeLibraryConstant.IntentTag.PRODUCTFUN, productFun);
 			startActivity(intent);
 			break;
 		case R.id.iv_btn_codetest_1:

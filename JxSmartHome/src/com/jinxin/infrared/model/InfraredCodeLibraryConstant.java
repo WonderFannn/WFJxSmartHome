@@ -8,6 +8,7 @@ public class InfraredCodeLibraryConstant {
 		public static final String DEVICE_TYPE = "DEVICETYPE";
 		public static final String BRAND = "BRAND";
 		public static final String MODEL = "MODEL";
+		public static final String CODE = "CODE";
 		public static final String UFO = "UFO";
 		public static final String PRODUCTFUN = "PRODUCTFUN";
 		public static final String FUNDETIAL = "FUNDETIAL";
@@ -28,6 +29,18 @@ public class InfraredCodeLibraryConstant {
 		};
 	}
 
+	public static final String[] DEVICE_NAME_CN = { 
+		"空气净化器",// 0
+		"空调",// 1
+		"投影仪",// 2
+		"风扇",// 3
+		"机顶盒",// 4
+		"电视",// 5
+		"IPTV",// 6
+		"DVD",// 7
+		"热水器",// 8
+		"单反相机",// 9
+	};
 	public static class DeviceType {
 		public static final int AirCleaner = 0;
 		public static final int AirCondition = 1;
