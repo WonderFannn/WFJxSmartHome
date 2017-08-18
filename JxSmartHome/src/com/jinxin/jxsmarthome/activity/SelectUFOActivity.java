@@ -27,10 +27,6 @@ public class SelectUFOActivity extends BaseActionBarActivity implements
 	private ListView lv;
 	private String[] strs;
 
-//	private List<CustomerProduct> cpList = null;
-//	private CustomerProduct currUFO = null;
-//	private CustomerProductDaoImpl cpdImpl = null;
-
 	private List<FunDetail> fdList;
 	private FunDetailDaoImpl funImpl = null;
 	private List<ProductFun> productFunList;
@@ -78,6 +74,14 @@ public class SelectUFOActivity extends BaseActionBarActivity implements
 		lv.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, strs));
 
 		lv.setOnItemClickListener(this);
+		if (productFunList.size() == 1) {
+			productFun = productFunList.get(0);
+			Intent intent = new Intent(this, AddRemoteDeviceActivity.class);
+			intent.putExtra(InfraredCodeLibraryConstant.IntentTag.PRODUCTFUN, productFun);
+			intent.putExtra(InfraredCodeLibraryConstant.IntentTag.FUNDETIAL, funDetail);
+
+			startActivity(intent);
+		}
 
 	}
 

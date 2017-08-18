@@ -167,8 +167,8 @@ public class RemoteControlActivity extends BaseActionBarActivity implements
 	@Override
 	public void onClick(View v) {
 		if (v == btn_addDevice) {
-			Intent addRemoteDeviceIntent = new Intent(this,SelectUFOActivity.class);
-			startActivity(addRemoteDeviceIntent);
+			Intent intent = new Intent(this,SelectUFOActivity.class);
+			startActivity(intent);
 		}
 	}
 
