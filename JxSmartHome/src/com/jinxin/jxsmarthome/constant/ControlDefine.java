@@ -97,6 +97,7 @@ public class ControlDefine {
 
 	/** 交易编码 ***************************/
 	// 账号登陆
+	
 	public static final String TRD_ACCOUNT_LOGIN = "T000";
 	// 注销账户
 	public static final String TRD_CANCELLATION_ACCOUNT = "T001";
