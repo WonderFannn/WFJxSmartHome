@@ -94,6 +94,8 @@ public class ControlDefine {
 	//唤醒词查看
 	public static final String BS_WAKE_WORD_BROWSE = "V019";
 	
+	//红外设备
+	public static final String BS_INFRARED_REMOTE_DEVICE_BIPCODE = "B041";
 
 	/** 交易编码 ***************************/
 	// 账号登陆
