@@ -343,7 +343,7 @@ public class RemoteBrandsTypeActivity extends BaseActionBarActivity {
 			public void onProcess(ITask task, Object[] arg) {
 			}
 		});
-		acrbTask.start();
+		acrbTask.start(); 
 	}
 	
 	private void loadData(int brandId){

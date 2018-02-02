@@ -11,7 +11,7 @@ import org.json.JSONObject;
 import com.jinxin.datan.net.module.RemoteJsonResultInfo;
 import com.jinxin.datan.toolkit.task.Task;
 import com.jinxin.jxsmarthome.constant.ControlDefine;
-import com.jinxin.jxsmarthome.entity.RemoteDeviceType;
+import com.jinxin.jxsmarthome.entity.InfraredRemoteController;
 import com.jinxin.jxsmarthome.util.CommUtil;
 
 public class GetInfraredRemoteControllerListRJ extends ResponseJson {
@@ -30,7 +30,7 @@ public class GetInfraredRemoteControllerListRJ extends ResponseJson {
 			boolean isSuccess = false;
 			RemoteJsonResultInfo _resultInfo = null;
 
-			List<RemoteDeviceType> deviceTypeList = null;
+			List<InfraredRemoteController> controllersList = null;
 			try {
 				JSONObject jsonObject = this.getJsonObjectFromIn(in);
 
@@ -49,14 +49,12 @@ public class GetInfraredRemoteControllerListRJ extends ResponseJson {
 					// 取列表数据
 					JSONArray jsonArray = jsonObject
 							.getJSONArray("serviceContent");
-					deviceTypeList = new ArrayList<RemoteDeviceType>();
+					controllersList = new ArrayList<InfraredRemoteController>();
 					for (int i = 0; i < jsonArray.length(); i++) {
 						if (this.task.ismTryCancel())
 							return;
 						JSONObject _jo = (JSONObject) jsonArray.get(i);
-						deviceTypeList.add(new RemoteDeviceType(getJsonInt(_jo, "id"), 
-								getJsonString(_jo,"deviceName"),
-								getJsonString(_jo,"icon")));
+						controllersList.add(new InfraredRemoteController());
 					}
 					isSuccess = true;
 					//TODO
@@ -70,7 +68,7 @@ public class GetInfraredRemoteControllerListRJ extends ResponseJson {
 				isSuccess = false;
 			} finally {
 				if (isSuccess) {
-					this.task.callback(deviceTypeList);
+					this.task.callback(controllersList);
 				} else {
 					this.task.onError(_resultInfo.validResultInfo);
 				}
